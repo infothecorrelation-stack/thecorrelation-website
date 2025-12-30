@@ -1,5 +1,6 @@
 // pages/blog.js or pages/blogs/index.js
 // Blog Listing Page - Red & White Theme
+"use client"
 
 import React, { useState, useMemo, useEffect } from "react";
 import { motion } from "framer-motion";
