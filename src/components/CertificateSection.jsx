@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRouter } from "next/router";
 
 const certificates = [
   { image: "/PGP-E-Certificate.png", name: "Post Graduate Program" },
@@ -13,12 +14,15 @@ const certificates = [
 ];
 
 const CertificateSection = () => {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [screenWidth, setScreenWidth] = useState(null);
 
-  /* ✅ SAFELY READ WINDOW WIDTH */
+  /* ✅ SSR-safe window width detection */
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const updateWidth = () => setScreenWidth(window.innerWidth);
     updateWidth();
 
