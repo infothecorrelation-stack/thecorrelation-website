@@ -67,7 +67,7 @@ const YourJourneySection = () => {
      <section id="steps-journey" className="relative">
       {/* Header */}
       <div className="py-8 px-4 flex items-center justify-center">
-        <h1 className="text-6xl font-bold text-center">Your Journey With Us</h1>
+        <h2 className="text-6xl font-bold text-center">Your Journey With Us</h2>
       </div>
 
       {/* Steps */}

@@ -21,12 +21,12 @@ export default function AboutTheCorrelation() {
 
         {/* Main Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
             About{' '}
             <span className="text-black">
               TheCorrelation
             </span>
-          </h1>
+          </h2>
         </div>
 
         {/* About & Image */}

@@ -117,7 +117,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
   ];
 
   const careerLinks = [
-    { label: "Career Acceleration", path: "/courses/career-acceleration" },
+    { label: "Elevate Program", path: "/courses/elevate-program" },
   ];
 
   const aboutLinks = [
@@ -217,7 +217,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                           exit="exit"
                           variants={dropdownVariants}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-black/50 backdrop-blur-lg rounded shadow-lg p-6 grid grid-cols-3 gap-6 text-white min-w-[55rem] border border-white/20"
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-black/50 backdrop-blur-lg rounded shadow-lg p-6 grid grid-cols-4 gap-6 text-white min-w-[55rem] border border-white/20"
                           style={{ zIndex: 10000 }}
                         >
                           <div>
@@ -225,7 +225,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               Post Graduation Program
                             </h3>
                             <p className="text-gray-400 text-xs mb-2">
-                              New comprehensive programs
+                             Comprehensive programs
                             </p>
                             <div className="flex flex-wrap gap-1 mb-2">
                               <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
@@ -339,6 +339,47 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               ))}
                             </ul>
                           </div>
+
+                          <div>
+                            <h3 className="font-bold text-white mb-1">
+                              Elevated Programs
+                            </h3>
+                            <p className="text-gray-400 text-xs mb-2">
+                             Career Boost + Self-paced
+                            </p>
+                            <div className="flex flex-wrap gap-1 mb-2">
+                              <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
+                                Online
+                              </span>
+                              <span className="text-xs bg-yellow-500/20 text-yellow-300 px-2 py-0.5 rounded">
+                                Flexible
+                              </span>
+                            </div>
+                            <ul className="space-y-1">
+                              {careerLinks.map((item) => (
+                                <motion.li
+                                  key={item.label}
+                                  whileHover={{ scale: 1.02 }}
+                                  whileTap={{ scale: 0.98 }}
+                                >
+                                  <Link
+                                    href={item.path}
+                                    onClick={() => {
+                                      setCoursesDropdownOpen(false);
+                                    }}
+                                    className={`block py-1 text-sm ${
+                                      pathname === item.path
+                                        ? "text-white font-medium border-b border-white"
+                                        : "text-gray-300 hover:text-white"
+                                    } transition duration-300`}
+                                  >
+                                    {item.label}
+                                  </Link>
+                                </motion.li>
+                              ))}
+                            </ul>
+                          </div>
+                          
 
                  
                         </motion.div>
@@ -548,14 +589,14 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                                     ? "bg-green-100 text-green-700"
                                     : "bg-green-500/20 text-green-300"
                                 }`}>
-                                  Online Mode
+                                  Offline
                                 </span>
                                 <span className={`text-xs px-2 py-0.5 rounded ${
                                   isLightBackground
                                     ? "bg-blue-100 text-blue-700"
                                     : "bg-blue-500/20 text-blue-300"
                                 }`}>
-                                  SNPL
+                                Premium
                                 </span>
                               </div>
                               <ul className="space-y-1 pl-2">
@@ -672,6 +713,62 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               </div>
                               <ul className="space-y-1 pl-2">
                                 {certificationLinks.map((item) => (
+                                  <motion.li
+                                    key={item.label}
+                                    whileHover={{ scale: 1.02 }}
+                                  >
+                                    <Link
+                                      href={item.path}
+                                      onClick={() => {
+                                        setCoursesDropdownOpen(false);
+                                        setMobileMenuOpen(false);
+                                      }}
+                                      className={`block py-1 px-2 text-sm ${
+                                        pathname === item.path
+                                          ? isLightBackground
+                                            ? "text-gray-900 font-medium"
+                                            : "text-white font-medium"
+                                          : isLightBackground
+                                          ? "text-gray-600"
+                                          : "text-gray-300"
+                                      }`}
+                                    >
+                                      {item.label}
+                                    </Link>
+                                  </motion.li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div className="mt-2">
+                              <h3 className={`font-bold mb-1 text-sm ${
+                                isLightBackground ? "text-gray-900" : "text-white"
+                              }`}>
+                                Elevated Programs
+                              </h3>
+                              <p className={`text-xs mb-1 ${
+                                isLightBackground ? "text-gray-600" : "text-gray-400"
+                              }`}>
+                                Career Boost + Self-paced
+                              </p>
+                              <div className="flex flex-wrap gap-1 mb-2">
+                                <span className={`text-xs px-2 py-0.5 rounded ${
+                                  isLightBackground
+                                    ? "bg-cyan-100 text-cyan-700"
+                                    : "bg-cyan-500/20 text-cyan-300"
+                                }`}>
+                                  Flexible
+                                </span>
+                                <span className={`text-xs px-2 py-0.5 rounded ${
+                                  isLightBackground
+                                    ? "bg-yellow-100 text-yellow-700"
+                                    : "bg-yellow-500/20 text-yellow-300"
+                                }`}>
+                                  Industry-Ready
+                                </span>
+                              </div>
+                              <ul className="space-y-1 pl-2">
+                                {careerLinks.map((item) => (
                                   <motion.li
                                     key={item.label}
                                     whileHover={{ scale: 1.02 }}

@@ -249,9 +249,9 @@ export default function CourseQuiz() {
         </div>
 
         {/* Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
           Find Your Perfect Course
-        </h1>
+        </h2>
 
         {/* Description */}
         <p className="text-base sm:text-lg text-gray-600 mb-6 md:mb-8 max-w-xl mx-auto">

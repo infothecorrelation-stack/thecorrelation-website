@@ -1,15 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 import { motion, LazyMotion, domAnimation, m } from "framer-motion";
 import { memo, useMemo } from "react";
-
-// Memoized hexagon data to prevent recreation on each render
-const hexagonPositions = [
-  { id: "hex1", top: "-25%", left: "50%" },
-  { id: "hex8", top: "33%", left: "72%" },
-];
+import CompactLeadForm from "./CompactLeadForm";
 
 // Memoized card data for better performance
 const featureCards = [
@@ -43,9 +37,18 @@ const featureCards = [
         "Personalized mentorship from AI and Data Science experts who guide learners through projects, interviews, and professional growth to become career-ready.",
     },
   },
+  {
+  title: "Career & Placement Support",
+  text: "Get end-to-end career support with resume building, interview preparation, mock interviews, and placement assistance to help you secure Data Science and AI roles.",
+  schema: {
+    "@type": "Service",
+    name: "Data Science Career & Placement Support",
+    description:
+      "Structured career guidance and placement support including resume optimization, mock interviews, and hiring partner connections to help learners land Data Science and AI jobs.",
+  },
+},
+
 ];
-
-
 
 // Optimized typewriter words for SEO
 const typewriterWords = [
@@ -56,37 +59,10 @@ const typewriterWords = [
   "Data Visualization",
 ];
 
-// Memoized Hexagon component for better performance
-const HexagonBackground = memo(() => {
-  return (
-    <div
-      className="absolute inset-0 z-10"
-      role="presentation"
-      aria-hidden="true"
-    >
-      {hexagonPositions.slice(0, 2).map(({ id, top, left }, index) => (
-        <Image
-          key={id}
-          src="/Hexagon1.png"
-          alt={`Decorative hexagon ${index + 1}`}
-          width={600}
-          height={600}
-          priority={true}
-          className={`absolute w-[600px] h-[600px] transition-transform  duration-300 ease-in-out hover:scale-105`}
-          style={{ top, left }}
-          loading="eager"
-        />
-      ))}
-    </div>
-  );
-});
-
-HexagonBackground.displayName = "HexagonBackground";
-
 // Memoized Feature Cards component
 const FeatureCards = memo(() => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full min-h-[180px] max-w-6xl px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full min-h-[180px] max-w-4xl px-8">
       {featureCards.map((card, index) => (
         <article
           key={card.title}
@@ -141,17 +117,10 @@ const HomeHero = () => {
     []
   );
 
-  const handleEnquireClick = () => {
-    const formElement = document.getElementById("contact-form");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <LazyMotion features={domAnimation}>
       <section
-        className="relative w-full min-h-screen overflow-hidden px-6 py-16 flex flex-col justify-center"
+        className="relative w-full min-h-screen overflow-hidden flex flex-col lg:flex-row"
         aria-label="Hero section promoting Data Science education at TheCorrelation"
         role="banner"
         itemScope
@@ -163,86 +132,100 @@ const HomeHero = () => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
 
-        {/* Background Image with Blur Overlay */}
-        <div className="absolute inset-0 z-0">
-  <Image
-    src="/HomeHero.jpg"
-    alt="Data Science background"
-    fill
-    priority
-    className="object-cover"
-    quality={90}
-    sizes="90vw"
-  />
+        {/* Background Image with Blur Overlay - Only for Left Side on Desktop */}
+        <div className="absolute inset-0 w-full z-0">
+          <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: "url('/HomeHero.jpg')"}}>
+          </div>
+          {/* Left blur gradient overlay */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/60"></div>
+          </div>
+        </div>
 
-  {/* Left blur gradient overlay */}
-  <div className="absolute inset-0">
-    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent "></div>
-  </div>
+        {/* Left Side - Content */}
+        <div className="relative w-full lg:w-2/3 z-20 flex flex-col justify-center px-6 lg:pl-24 lg:pr-8 py-16 lg:py-24">
+          <m.div
+            className="max-w-3xl text-white space-y-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-full flex justify-start items-center">
+  <h1 className="
+    text-3xl md:text-4xl lg:text-5xl 
+    font-bold leading-tight text-white 
+    flex flex-wrap lg:flex-nowrap gap-2 
+    drop-shadow-lg
+  ">
+    <span className="whitespace-nowrap">
+      Become the Future of
+    </span>
+
+    <span className="
+      text-orange-400 
+      whitespace-nowrap 
+      lg:min-w-[220px]
+      text-left
+    ">
+      <Typewriter
+        words={typewriterWords}
+        loop={0}
+        cursor
+        cursorStyle="|"
+        typeSpeed={70}
+        deleteSpeed={50}
+        delaySpeed={1500}
+      />
+    </span>
+  </h1>
 </div>
 
 
-        {/* Optimized Hexagon Background */}
-        <HexagonBackground />
+            <p
+              className="text-base md:text-lg font-light text-white drop-shadow-lg max-w-2xl"
+              itemProp="description"
+            >
+              Welcome to <strong itemProp="legalName">TheCorrelation</strong> — India's leading hub for 
+              <strong> Data Science</strong>, <strong>AI</strong>, and <strong>Machine Learning</strong> education.  
+              Our hands-on programs, expert mentors, and globally recognized certifications prepare you to 
+              lead the future of technology.  
+              <br />
+              <br />
+              <strong>Begin your AI-powered journey with us today!</strong>
+            </p>
+          </m.div>
 
-        {/* Main Content with SEO optimization */}
-        <m.div
-          className="z-20 max-w-3xl text-white space-y-6
-          sm:absolute sm:top-[20%] sm:left-[5%] sm:right-0 sm:z-30 sm:flex sm:flex-col sm:justify-start sm:items-start sm:h-full sm:px-4"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
-          <div className="w-full flex justify-start lg:mx-34 items-center">
-            <h1 className="text-xl md:text-4xl lg:text-4xl font-bold leading-tight text-white flex flex-wrap gap-2 drop-shadow-lg">
-  <span className="whitespace-nowrap">
-    Become the Future of
-  </span>
-
-  <span className="block sm:inline text-orange-400 whitespace-nowrap min-w-[200px] text-left">
-    <Typewriter
-      words={typewriterWords}
-      loop={0}
-      cursor
-      cursorStyle="|"
-      typeSpeed={70}
-      deleteSpeed={50}
-      delaySpeed={1500}
-    />
-  </span>
-</h1>
+          {/* Bottom Cards */}
+          <div className="mt-12 lg:mt-16">
+            <FeatureCards />
           </div>
-
-          <p
-  className="text-md md:text-lg lg:pl-32 font-light text-white drop-shadow-lg"
-  itemProp="description"
->
-  Welcome to <strong itemProp="legalName">TheCorrelation</strong> — India’s leading hub for 
-  <strong> Data Science</strong>, <strong>AI</strong>, and <strong>Machine Learning</strong> education.  
-  Our hands-on programs, expert mentors, and globally recognized certifications prepare you to 
-  lead the future of technology.  
-  <br />
-  <br />
-  <strong>Begin your AI-powered journey with us today!</strong>
-</p>
-
-        </m.div>
-
-        {/* Bottom Cards + Button */}
-        <div className="z-30 mt-12 sm:mt-[65vh] flex flex-col items-center space-y-8">
-          <FeatureCards />
-
-          {/* SEO Optimized Enquire Button */}
-          <button
-            onClick={handleEnquireClick}
-            type="button"
-            className="px-10 py-4 bg-white text-black font-bold text-lg rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
-          >
-            ENQUIRE NOW
-          </button>
         </div>
-        
+
+        {/* Right Side - Form */}
+        <div
+  className="
+    relative 
+    w-full lg:w-1/3 
+    z-20
+
+    
+    flex items-center justify-center
+
+    px-6 py-16 lg:py-10
+    mt-28 mb-6 mr-4 lg:mr-8
+
+    rounded-2xl shadow-2xl
+  "
+>
+  <div className="w-full max-w-md">
+    <CompactLeadForm
+      courseName="general"
+      courseDisplayName="Course Details"
+    />
+  </div>
+</div>
+
       </section>
     </LazyMotion>
   );

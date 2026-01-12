@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { ArrowLeft, User, Calendar, Tag, Share2, Twitter, Linkedin } from 'lucide-react';
+import Head from 'next/head';
 
 const BlogDetail = () => {
   const router = useRouter();
@@ -82,6 +83,104 @@ const BlogDetail = () => {
   /* ------------------ UI ------------------ */
 
   return (
+    <>
+    <Head>
+  {/* Dynamic Title */}
+  <title>
+    {blog.title} | Data Science & AI Blog | TheCorrelation
+  </title>
+
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content={
+      blog.excerpt ||
+      `Read expert insights on ${blog.category} by TheCorrelation. Learn Data Science, AI, Machine Learning and career guidance.`
+    }
+  />
+
+  {/* Keywords */}
+  <meta
+    name="keywords"
+    content={`Data Science Blog, AI Blog, Machine Learning Blog, ${blog.category}, ${blog.tags || ''}, TheCorrelation`}
+  />
+
+  {/* Robots */}
+  <meta name="robots" content="index, follow" />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href={`https://thecorrelation.in/blog/${slug}`}
+  />
+
+  {/* Open Graph */}
+  <meta property="og:title" content={blog.title} />
+  <meta
+    property="og:description"
+    content={
+      blog.excerpt ||
+      `Expert-written blog on ${blog.category} by TheCorrelation.`
+    }
+  />
+  <meta
+    property="og:url"
+    content={`https://thecorrelation.in/blog/${slug}`}
+  />
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:image"
+    content={
+      blog.image
+        ? blog.image
+        : 'https://thecorrelation.in/Top-logo1.png'
+    }
+  />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={blog.title} />
+  <meta
+    name="twitter:description"
+    content={
+      blog.excerpt ||
+      `Read this ${blog.category} article by TheCorrelation.`
+    }
+  />
+
+  {/* 🔥 BLOG STRUCTURED DATA (JSON-LD) */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": blog.title,
+        "description": blog.excerpt,
+        "image": blog.image || "https://thecorrelation.in/Top-logo1.png",
+        "author": {
+          "@type": "Person",
+          "name": blog.author || "TheCorrelation Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "TheCorrelation",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://thecorrelation.in/Top-logo1.png"
+          }
+        },
+        "datePublished": blog.date,
+        "dateModified": blog.date,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://thecorrelation.in/blog/${slug}`
+        }
+      })
+    }}
+  />
+</Head>
+
     <div className="bg-gray-100 min-h-screen">
       {/* Back Button */}
       <div className="px-4 md:px-12 py-14 pt-24">
@@ -164,6 +263,7 @@ const BlogDetail = () => {
         </div>
       </motion.article>
     </div>
+    </>
   );
 };
 

@@ -33,9 +33,11 @@ import HomeHero from '@/components/HomeHero';
 import YourJourneySection from '@/components/YourJourneySection';
 import DataScienceSection from '@/components/DataScienceSection';
 import LeadForm from '@/components/LeadForm'; // Update this path based on your structure
+import CertificateSection from '@/components/CertificateSection';
 import {
   BookOpen,User,Clipboard,Code2,Database,ChevronRight,BarChart3,LineChart,BrainCircuit,HelpCircle,Rocket,ShoppingCart,Brain,Sparkles,Bot,Monitor,CreditCard,MapPin,Building,Search,ArrowRight,Check,
 } from 'lucide-react';
+
 
 
 
@@ -48,24 +50,79 @@ const Home = () => {
   return (
     <div >
       <Head>
-        <title>TheCorrelation | Industry-Ready Data Science & AI Programs</title>
+  {/* Primary SEO */}
+ <title>Industry-Ready Data Science, AI & ML Courses in Indore | TheCorrelation</title>
 
-        <meta
-          name="description"
-          content="TheCorrelation offers industry-ready Data Science, Machine Learning, Deep Learning and Generative AI programs with real-world projects and expert mentors."
-        />
 
-        <meta
-          name="keywords"
-          content="Data Science Course, Machine Learning Course, AI Course, Generative AI, Data Analytics, TheCorrelation"
-        />
+  <meta
+    name="description"
+    content="TheCorrelation is an AI, Machine Learning and Data Science institute in Indore, India offering industry-ready programs with real-world projects, expert mentors, and placement support."
+  />
 
-        
-      </Head>
+  <link rel="canonical" href="https://thecorrelation.in" />
+
+  {/* Search Engine Indexing */}
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  {/* Geo / Local SEO */}
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Indore" />
+  <meta name="geo.position" content="22.7196;75.8577" />
+  <meta name="ICBM" content="22.7196, 75.8577" />
+
+  {/* Brand / Trust */}
+  <meta name="author" content="TheCorrelation" />
+  <meta name="publisher" content="TheCorrelation" />
+  <meta name="application-name" content="TheCorrelation" />
+
+  {/* Keywords (AI Scraper Friendly) */}
+  <meta
+    name="keywords"
+    content="data science institute in indore, ai course indore, machine learning course indore, generative ai course, business analytics course, thecorrelation"
+  />
+
+  {/* Open Graph (Social + AI previews) */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TheCorrelation" />
+  <meta property="og:title" content="Industry-Ready Data Science, AI & ML Courses in Indore | TheCorrelation" />
+  <meta
+    property="og:description"
+    content="TheCorrelation is an AI, Machine Learning and Data Science institute in Indore offering industry-ready programs with real-world projects and placement support."
+  />
+  <meta property="og:url" content="https://thecorrelation.in/" />
+  <meta property="og:image" content="https://thecorrelation.in/og-image.png" />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Industry-Ready Data Science, AI & ML Courses in Indore | TheCorrelation" />
+  <meta
+    name="twitter:description"
+    content="Industry-ready AI, ML and Data Science programs in Indore with real projects, mentors and placement support."
+  />
+  <meta name="twitter:image" content="https://thecorrelation.in/og-image.png" />
+
+  {/* Mobile / UX */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+
+  {/* Favicons */}
+  <link rel="icon" href="/Top-logo1.png" />
+  <link rel="apple-touch-icon" href="/Top-logo1.png" />
+</Head>
+
 
       {/* Hero Section */}
 
       <HomeHero></HomeHero>
+
+      {/* Success Stories Section */}
+      <SuccessStoriesSection />
+
+      <CourseSlidder></CourseSlidder>
+
+      <WhichCourseIsBetter></WhichCourseIsBetter>
 
      <DataScienceSection/>
       
@@ -74,10 +131,10 @@ const Home = () => {
       <AboutUsSection></AboutUsSection>
 
 
-      <CourseSlidder></CourseSlidder>
+      
 
 
-      <WhichCourseIsBetter></WhichCourseIsBetter>
+      
 
       <LeadForm></LeadForm>
 
@@ -91,16 +148,8 @@ const Home = () => {
       <WhoShouldJoin></WhoShouldJoin>
 
 
-      {/* Success Stories Section */}
-      <SuccessStoriesSection />
-
-
       
-      {/* Logic Box Section */}
-      <LogicBoxSection />
-
-
-      
+      <CertificateSection/>
 
       
     </div>

@@ -42,7 +42,7 @@ export default function AdmissionPolicy() {
   return (
     <>
       <Head>
-        <title>Admission Policy - TheCorrelation Educational Institute</title>
+        <title>Admission Policy | TheCorrelation</title>
         <meta
           name="description"
           content="Complete admission policy for TheCorrelation Educational Institute including registration fees, class schedules, refund policy, and enrollment terms."

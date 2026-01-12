@@ -138,19 +138,64 @@ const Blog = () => {
     <>
     
 
+   {/* 🔥 SEO HEAD – BLOG */}
 <Head>
-  {/* Primary SEO */}
-  <title>Data Science & AI Blog | The Correlation</title>
+  {/* Title */}
+  <title>Data Science, AI & ML Blog | Industry Insights | TheCorrelation</title>
+
+  {/* Meta Description */}
   <meta
     name="description"
-    content="Explore expert-written blogs on Data Science, Machine Learning, AI, Analytics, and career guidance. Learn from industry professionals at The Correlation."
+    content="Read expert blogs on Data Science, Machine Learning, AI, Analytics, and career guidance. Industry insights, tutorials, and trends by TheCorrelation."
   />
+
+  {/* Keywords (still useful for AI context) */}
   <meta
     name="keywords"
-    content="Data Science Blog, Machine Learning Blog, AI Blog, Analytics Blog, Data Science Tutorials, AI Careers, Machine Learning Insights, The Correlation"
+    content="Data Science Blog, Machine Learning Blog, AI Blog, Analytics Blog, Data Science Careers, AI Careers, ML Tutorials, Industry Insights, TheCorrelation"
   />
-  
+
+  {/* Robots */}
+  <meta name="robots" content="index, follow" />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://thecorrelation.in/blog"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Data Science, AI & ML Blog | TheCorrelation"
+  />
+  <meta
+    property="og:description"
+    content="Industry insights, tutorials, and career guidance in Data Science, AI & Machine Learning by TheCorrelation."
+  />
+  <meta
+    property="og:url"
+    content="https://thecorrelation.in/blog"
+  />
+  <meta property="og:type" content="website" />
+
+  {/* OG Image fallback (safe default) */}
+ 
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Data Science, AI & ML Blog | TheCorrelation"
+  />
+  <meta
+    name="twitter:description"
+    content="Expert-written blogs on Data Science, AI, Machine Learning, Analytics & careers."
+  />
 </Head>
+
+  {/* Primary SEO */}
+  
 
     <div className="bg-gray-100 px-4 md:px-12 py-24 min-h-screen">
       {/* Header */}

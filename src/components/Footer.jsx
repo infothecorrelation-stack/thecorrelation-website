@@ -76,7 +76,8 @@ const Footer = () => {
 
   const footerData = {
     services: [
-      { label: "PG Programs", href: "/courses/post-graduation-program" },
+       { label: "Elevate Program", href: "/courses/elevate-program" },
+      { label: "PG Program", href: "/courses/post-graduation-program" },
       {
         label: "Certification Courses",
         href: "/courses/chartered-data-science",

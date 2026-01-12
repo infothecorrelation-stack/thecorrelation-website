@@ -67,148 +67,9 @@ const CharteredBusinessAnalytics = () => {
   { title: "6 Months", label: "Program Duration" },
 ];
   
-    const progressBars = [
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-    ];
+   
  
-  const [mode, setMode] = useState('online');
-
-  const cards = [
-      {
-        title: 'Final-year students & Freshers',
-        desc: 'Launch your career in data science',
-        icon: <GraduationCap className="w-8 h-8 text-white" />,
-        bg: 'from-blue-50 to-blue-100',
-        iconBg: 'bg-blue-500',
-      },
-      {
-        title: 'Working Professionals',
-        desc: 'Upskill for better opportunities',
-        icon: <Briefcase className="w-8 h-8 text-white" />,
-        bg: 'from-green-50 to-green-100',
-        iconBg: 'bg-green-500',
-      },
-      {
-        title: 'Non-tech Graduates',
-        desc: 'Transition into tech seamlessly',
-        icon: <User className="w-8 h-8 text-white" />,
-        bg: 'from-purple-50 to-purple-100',
-        iconBg: 'bg-purple-500',
-      },
-      {
-        title: 'Career Switchers',
-        desc: 'Make the switch with confidence',
-        icon: <RefreshCw className="w-8 h-8 text-white" />,
-        bg: 'from-orange-50 to-orange-100',
-        iconBg: 'bg-orange-500',
-      },
-    ];
-    
-    const steps = [
-        {
-          icon: Phone,
-          color: 'blue',
-          step: 'Step 1',
-          title: 'Connect with Our Experts',
-          desc: 'Schedule a free consultation to discuss your career goals and program fit.',
-        },
-        {
-          icon: List,
-          color: 'green',
-          step: 'Step 2',
-          title: 'Registration & Profile Evaluation',
-          desc: 'Complete your registration and get your profile evaluated by our admission team.',
-        },
-        {
-          icon: Award,
-          color: 'purple',
-          step: 'Step 3',
-          title: 'Scholarship Assessment',
-          desc: 'Take our aptitude test and profile assessment for scholarship opportunities.',
-        },
-        {
-          icon: Wallet,
-          color: 'orange',
-          step: 'Step 4',
-          title: 'Fee & EMI Options',
-          desc: 'Receive personalized fee structure and flexible EMI payment options.',
-        },
-        {
-          icon: GraduationCap,
-          color: 'red',
-          step: 'Step 5',
-          title: '9 Months Curriculum',
-          desc: 'Intensive learning with live classes, projects, and hands-on experience.',
-        },
-        {
-          icon: Briefcase,
-          color: 'indigo',
-          step: 'Step 6',
-          title: 'Paid Internship',
-          desc: 'Gain real industry experience with our paid internship program.',
-        },
-        {
-          icon: Trophy,
-          color: 'yellow',
-          step: 'Step 7',
-          title: 'Job Placement & Certification',
-          desc: 'Get placed in top companies with our 100% job guarantee and receive your certification.',
-          fullWidth: true,
-        },
-      ];
-
-    const plans = {
-  online: [
-    {
-      title: 'Pay Now',
-      price: '₹89,999',
-      bg: 'from-blue-50 to-blue-100',
-      border: 'border-blue-200',
-      text: 'text-blue-900',
-      button: 'bg-blue-600 hover:bg-blue-700',
-      features: ['Save ₹30,000', 'Lifetime access', 'Priority support'],
-    },
-    {
-      title: 'EMI Option',
-      price: '₹9,999/month',
-      subtitle: 'for 12 months',
-      highlight: 'Most Popular',
-      bg: 'from-green-50 to-green-100',
-      border: 'border-green-200',
-      text: 'text-green-900',
-      button: 'bg-green-600 hover:bg-green-700',
-      features: ['0% interest for 6 months', 'No hidden charges', 'Flexible payment'],
-    },
-  ],
-  offline: [
-    {
-      title: 'Pay Now',
-      price: '₹1,49,999',
-      bg: 'from-blue-50 to-blue-100',
-      border: 'border-blue-200',
-      text: 'text-blue-900',
-      button: 'bg-blue-600 hover:bg-blue-700',
-      features: ['Save ₹50,000', 'In-person classes', 'Lab access'],
-    },
-    {
-      title: 'EMI Option',
-      price: '₹16,666/month',
-      subtitle: 'for 12 months',
-      highlight: 'Most Popular',
-      bg: 'from-green-50 to-green-100',
-      border: 'border-green-200',
-      text: 'text-green-900',
-      button: 'bg-green-600 hover:bg-green-700',
-      features: ['0% interest for 6 months', 'Campus facilities', 'Peer networking'],
-    },
-  ],
-};
-
+  
 
 const [openIndex, setOpenIndex] = useState(null);
 
@@ -295,23 +156,83 @@ const toggleFAQ = (index) => {
   return (
     <div>
       <Head>
-        {/* Title */}
-        <title>Chartered Business Analytics Program | TheCorrelation</title>
+  {/* Title */}
+  <title>
+    Chartered Business Analytics Program | TheCorrelation
+  </title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Join TheCorrelation's Chartered Business Analytics Program. Learn SQL, Excel, Power BI, Tableau, and Analytics with real-world projects and expert mentorship."
-        />
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="TheCorrelation’s Chartered Business Analytics Program in Indore teaches SQL, Excel, Power BI, Tableau, and Analytics through real-world projects with expert mentorship."
+  />
 
-        {/* Keywords */}
-        <meta
-          name="keywords"
-          content="Chartered Business Analytics, Business Analytics Program, Power BI Course, Tableau Course, SQL Analytics"
-        />
+  {/* Keywords */}
+  <meta
+    name="keywords"
+    content="chartered business analytics program, business analytics course indore, power bi course, tableau course, sql analytics, thecorrelation"
+  />
 
-       
-      </Head>
+  {/* Canonical URL (match Navbar) */}
+  <link
+    rel="canonical"
+    href="https://thecorrelation.in/courses/chartered-bussiness-analytics"
+  />
+
+  {/* Indexing */}
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large"
+  />
+
+  {/* Local SEO */}
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Indore" />
+
+  {/* Brand Authority */}
+  <meta name="author" content="TheCorrelation" />
+  <meta name="publisher" content="TheCorrelation" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TheCorrelation" />
+  <meta
+    property="og:title"
+    content="Chartered Business Analytics Program | TheCorrelation"
+  />
+  <meta
+    property="og:description"
+    content="Master SQL, Excel, Power BI, Tableau, and Analytics with TheCorrelation’s Chartered Business Analytics Program."
+  />
+  <meta
+    property="og:url"
+    content="https://thecorrelation.in/courses/chartered-bussiness-analytics"
+  />
+  <meta
+    property="og:image"
+    content="https://thecorrelation.in/og-chartered-ba.png"
+  />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Chartered Business Analytics Program | TheCorrelation"
+  />
+  <meta
+    name="twitter:description"
+    content="Learn SQL, Excel, Power BI, Tableau, and Analytics through real-world projects at TheCorrelation."
+  />
+  <meta
+    name="twitter:image"
+    content="https://thecorrelation.in/og-chartered-ba.png"
+  />
+
+  {/* Mobile */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</Head>
 
        <section className="relative text-white">
       

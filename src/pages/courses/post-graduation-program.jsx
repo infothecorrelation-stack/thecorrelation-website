@@ -44,14 +44,7 @@ const stats = [
   { title: "12 Months", label: "Program Duration" },
 ];
   
-    const progressBars = [
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-    ];
+   
   
     
 
@@ -135,102 +128,14 @@ const stats = [
 ];
 
 
- const topics = [
-  
-  {
-    title: 'English for Communication',
-    description: 'Speak clearly and confidently in any setting.',
-    icon: <Languages className="text-orange-500 w-8 h-8" />,
-  },
-  {
-    title: 'Vocabulary + Grammar Boost',
-    description: 'Expand your word power and build strong grammar.',
-    icon: <BookText className="text-yellow-500 w-8 h-8" />,
-  },
-  {
-    title: 'Roleplay Sessions',
-    description: 'Practice real-world workplace scenarios.',
-    icon: <Users className="text-purple-500 w-8 h-8" />,
-  },
-  {
-    title: 'Soft Skills & Teamwork',
-    description: 'Develop strong interpersonal and team skills.',
-    icon: <Volume2 className="text-blue-500 w-8 h-8" />,
-  },
-  {
-    title: 'Resume & Job Applications',
-    description: 'Craft standout resumes and effective job forms.',
-    icon: <FileText className="text-pink-500 w-8 h-8" />,
-  },
-  {
-    title: 'Interview Preparation',
-    description: 'Crack every round with expert interview tips.',
-    icon: <ClipboardList className="text-green-500 w-8 h-8" />,
-  },
-  {
-    title: 'Career Readiness',
-    description: 'Become confident, articulate, and job-ready.',
-    icon: <BadgeCheck className="text-red-500 w-8 h-8" />,
-  },
-];
+ 
 
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const steps = [
-    {
-      icon: Phone,
-      color: 'blue',
-      step: 'Step 1',
-      title: 'Connect with Our Experts',
-      desc: 'Schedule a free consultation to discuss your career goals and program fit.',
-    },
-    {
-      icon: List,
-      color: 'green',
-      step: 'Step 2',
-      title: 'Registration & Profile Evaluation',
-      desc: 'Complete your registration and get your profile evaluated by our admission team.',
-    },
-    {
-      icon: Award,
-      color: 'purple',
-      step: 'Step 3',
-      title: 'Scholarship Assessment',
-      desc: 'Take our aptitude test and profile assessment for scholarship opportunities.',
-    },
-    {
-      icon: Wallet,
-      color: 'orange',
-      step: 'Step 4',
-      title: 'Fee & EMI Options',
-      desc: 'Receive personalized fee structure and flexible EMI payment options.',
-    },
-    {
-      icon: GraduationCap,
-      color: 'red',
-      step: 'Step 5',
-      title: '9 Months Curriculum',
-      desc: 'Intensive learning with live classes, projects, and hands-on experience.',
-    },
-    {
-      icon: Briefcase,
-      color: 'indigo',
-      step: 'Step 6',
-      title: 'Paid Internship',
-      desc: 'Gain real industry experience with our paid internship program.',
-    },
-    {
-      icon: Trophy,
-      color: 'yellow',
-      step: 'Step 7',
-      title: 'Job Placement & Certification',
-      desc: 'Get placed in top companies with our 100% job guarantee and receive your certification.',
-      fullWidth: true,
-    },
-  ];
+  
 
 
   
@@ -241,68 +146,87 @@ const stats = [
 
 
 
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-  const [loading, setLoading] = useState(false);
-
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-
+ 
 
   return (
     <div> 
       {/* 🔥 SEO META TAGS */}
-      <Head>
-        <title>
-          Post Graduate Program in Data Science & AI | TheCorrelation
-        </title>
+<Head>
+  {/* Primary SEO */}
+  <title>
+    Post Graduate Program in Data Science & AI | TheCorrelation
+  </title>
 
-        <meta
-          name="description"
-          content="Join TheCorrelation’s Post Graduate Program in Data Science & AI. Learn Python, SQL, Machine Learning, Deep Learning and Generative AI with real-world projects and expert mentors."
-        />
+  <meta
+    name="description"
+    content="TheCorrelation’s Post Graduate Program in Data Science & AI in Indore helps you master Python, SQL, Machine Learning, Deep Learning and Generative AI through real-world projects and expert mentorship."
+  />
 
-        <meta
-          name="keywords"
-          content="PGP Data Science, Post Graduate Program in Data Science, AI PGP Course, Machine Learning PGP, TheCorrelation"
-        />
+  <meta
+    name="keywords"
+    content="pgp data science indore, post graduate program in data science, ai pgp course, machine learning pgp, generative ai pgp, thecorrelation"
+  />
 
-        <meta name="robots" content="index, follow" />
+  <link
+    rel="canonical"
+    href="https://thecorrelation.in/courses/post-graduation-program"
+  />
 
-        <link
-          rel="canonical"
-          href="https://thecorrelation.in/programs/pgp-data-science"
-        />
+  {/* Indexing Control */}
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  />
 
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Post Graduate Program in Data Science & AI | TheCorrelation"
-        />
-        <meta
-          property="og:description"
-          content="Become industry-ready with TheCorrelation’s PGP in Data Science, AI & Machine Learning."
-        />
-        <meta
-          property="og:url"
-          content="https://thecorrelation.in/programs/pgp-data-science"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://thecorrelation.in/og-pgp.jpg"
-        />
+  {/* Local SEO Signal */}
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Indore" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
+  {/* Brand Authority */}
+  <meta name="author" content="TheCorrelation" />
+  <meta name="publisher" content="TheCorrelation" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TheCorrelation" />
+  <meta
+    property="og:title"
+    content="Post Graduate Program in Data Science & AI | TheCorrelation"
+  />
+  <meta
+    property="og:description"
+    content="Industry-ready Post Graduate Program in Data Science & AI with real projects, tools, and expert mentors at TheCorrelation."
+  />
+  <meta
+    property="og:url"
+    content="https://thecorrelation.in/courses/post-graduation-program"
+  />
+  <meta
+    property="og:image"
+    content="https://thecorrelation.in/og-pgp.png"
+  />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Post Graduate Program in Data Science & AI | TheCorrelation"
+  />
+  <meta
+    name="twitter:description"
+    content="Master Data Science, AI and Machine Learning with TheCorrelation’s PGP program in Indore."
+  />
+  <meta
+    name="twitter:image"
+    content="https://thecorrelation.in/og-pgp.png"
+  />
+
+  {/* Mobile */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</Head>
+
 
       <section className="relative text-white">
     

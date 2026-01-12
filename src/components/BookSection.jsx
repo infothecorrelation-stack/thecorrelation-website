@@ -79,9 +79,9 @@ const BookSlider = ({ config = defaultSliderConfig }) => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 opacity-0 animate-[fadeInUp_0.8s_ease-out_forwards]">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
             {mainHeading}
-          </h1>
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 max-w-4xl mx-auto px-4">
             {subheading}
           </p>

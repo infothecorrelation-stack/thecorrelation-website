@@ -158,7 +158,7 @@ export default function AboutUs() {
     <>
     <Head>
         {/* Title */}
-        <title>About TheCorrelation | Data Science & AI </title>
+        <title>About TheCorrelation | AI & Data Science Institute in Indore</title>
 
         {/* Meta Description */}
         <meta

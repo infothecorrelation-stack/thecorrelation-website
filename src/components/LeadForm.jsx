@@ -42,6 +42,9 @@ const LeadForm = () => {
     // Career Programs
     "/courses/career-acceleration": "Career Acceleration",
 
+    // Career Programs
+    "/courses/elevate-program": "Elevate Program",
+
     // Default
     "general": "Our Program"
   };
@@ -164,7 +167,7 @@ const LeadForm = () => {
         timestamp: formattedTimestamp,
       };
 
-      console.log("Submitting data:", submissionData); // Debug log
+      
 
       const result = await submitForm(submissionData);
 
@@ -215,7 +218,7 @@ const LeadForm = () => {
             </div>
 
             <div className="mb-12">
-              <h1 className="text-6xl lg:text-7xl font-bold mb-6 leading-none">
+              <h2 className="text-6xl lg:text-7xl font-bold mb-6 leading-none">
                 <span className="text-white">
                   Master
                 </span>
@@ -223,7 +226,7 @@ const LeadForm = () => {
                 <span className="text-white drop-shadow-lg">
                   {courseDisplayName || "Your Career"}
                 </span>
-              </h1>
+              </h2>
               <p className="text-xl text-white/90 leading-relaxed max-w-md">
                 {courseDisplayName 
                   ? `Become an expert in ${courseDisplayName.toLowerCase()} with our comprehensive program` 

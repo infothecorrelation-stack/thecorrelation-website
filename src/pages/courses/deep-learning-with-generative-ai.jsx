@@ -78,15 +78,7 @@ const PostGraduation2 = () => {
     { title: "3 Months", label: "Program Duration" },
   ];
 
-  const progressBars = [
-    { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-    { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-    { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-    { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-    { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-    { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-  ];
-
+ 
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
@@ -163,137 +155,94 @@ const PostGraduation2 = () => {
 ];
 
 
-  const topics = [
-    {
-      title: "English for Communication",
-      description: "Speak clearly and confidently in any setting.",
-      icon: <Languages className="text-orange-500 w-8 h-8" />,
-    },
-    {
-      title: "Vocabulary + Grammar Boost",
-      description: "Expand your word power and build strong grammar.",
-      icon: <BookText className="text-yellow-500 w-8 h-8" />,
-    },
-    {
-      title: "Roleplay Sessions",
-      description: "Practice real-world workplace scenarios.",
-      icon: <Users className="text-purple-500 w-8 h-8" />,
-    },
-    {
-      title: "Soft Skills & Teamwork",
-      description: "Develop strong interpersonal and team skills.",
-      icon: <Volume2 className="text-blue-500 w-8 h-8" />,
-    },
-    {
-      title: "Resume & Job Applications",
-      description: "Craft standout resumes and effective job forms.",
-      icon: <FileText className="text-pink-500 w-8 h-8" />,
-    },
-    {
-      title: "Interview Preparation",
-      description: "Crack every round with expert interview tips.",
-      icon: <ClipboardList className="text-green-500 w-8 h-8" />,
-    },
-    {
-      title: "Career Readiness",
-      description: "Become confident, articulate, and job-ready.",
-      icon: <BadgeCheck className="text-red-500 w-8 h-8" />,
-    },
-  ];
-
+  
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const steps = [
-    {
-      icon: Phone,
-      color: "blue",
-      step: "Step 1",
-      title: "Connect with Our Experts",
-      desc: "Schedule a free consultation to discuss your career goals and program fit.",
-    },
-    {
-      icon: List,
-      color: "green",
-      step: "Step 2",
-      title: "Registration & Profile Evaluation",
-      desc: "Complete your registration and get your profile evaluated by our admission team.",
-    },
-    {
-      icon: Award,
-      color: "purple",
-      step: "Step 3",
-      title: "Scholarship Assessment",
-      desc: "Take our aptitude test and profile assessment for scholarship opportunities.",
-    },
-    {
-      icon: Wallet,
-      color: "orange",
-      step: "Step 4",
-      title: "Fee & EMI Options",
-      desc: "Receive personalized fee structure and flexible EMI payment options.",
-    },
-    {
-      icon: GraduationCap,
-      color: "red",
-      step: "Step 5",
-      title: "9 Months Curriculum",
-      desc: "Intensive learning with live classes, projects, and hands-on experience.",
-    },
-    {
-      icon: Briefcase,
-      color: "indigo",
-      step: "Step 6",
-      title: "Paid Internship",
-      desc: "Gain real industry experience with our paid internship program.",
-    },
-    {
-      icon: Trophy,
-      color: "yellow",
-      step: "Step 7",
-      title: "Job Placement & Certification",
-      desc: "Get placed in top companies with our 100% job guarantee and receive your certification.",
-      fullWidth: true,
-    },
-  ];
-
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-  const [loading, setLoading] = useState(false);
-
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  
 
   return (
     <div>
       <Head>
-        {/* Title */}
-        <title>
-          Certification Program in Deep Learning & Generative AI | TheCorrelation
-        </title>
+  {/* Title */}
+  <title>
+    Deep Learning & Generative AI Course | TheCorrelation
+  </title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Enroll in TheCorrelation's Certification Program in Deep Learning & Generative AI. Learn neural networks, CNNs, RNNs, LLMs, GenAI, and real-world AI projects."
-        />
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="TheCorrelation’s Deep Learning & Generative AI course in Indore covers neural networks, CNNs, RNNs, LLMs, GenAI tools, and real-world AI projects with expert mentorship."
+  />
 
-        {/* Keywords */}
-        <meta
-          name="keywords"
-          content="Deep Learning Course, Generative AI Program, GenAI Certification, LLM Course, AI Certification, TheCorrelation"
-        />
+  {/* Keywords */}
+  <meta
+    name="keywords"
+    content="deep learning course indore, generative ai course, genai certification, llm course, artificial intelligence program, thecorrelation"
+  />
 
-        {/* Canonical */}
-        
-      </Head>
+  {/* Canonical (MUST match Navbar URL) */}
+  <link
+    rel="canonical"
+    href="https://thecorrelation.in/courses/deep-learning-with-generative-ai"
+  />
+
+  {/* Indexing */}
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large"
+  />
+
+  {/* Local SEO */}
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Indore" />
+
+  {/* Brand Authority */}
+  <meta name="author" content="TheCorrelation" />
+  <meta name="publisher" content="TheCorrelation" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TheCorrelation" />
+  <meta
+    property="og:title"
+    content="Deep Learning & Generative AI Course | TheCorrelation"
+  />
+  <meta
+    property="og:description"
+    content="Master Deep Learning and Generative AI with hands-on projects, LLMs, and expert mentors at TheCorrelation."
+  />
+  <meta
+    property="og:url"
+    content="https://thecorrelation.in/courses/deep-learning-with-generative-ai"
+  />
+  <meta
+    property="og:image"
+    content="https://thecorrelation.in/og-genai.png"
+  />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Deep Learning & Generative AI Course | TheCorrelation"
+  />
+  <meta
+    name="twitter:description"
+    content="Learn Deep Learning, LLMs and Generative AI with real-world projects at TheCorrelation."
+  />
+  <meta
+    name="twitter:image"
+    content="https://thecorrelation.in/og-genai.png"
+  />
+
+  {/* Mobile */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</Head>
+
       <section className="relative text-white">
         {/* Optimized Background Image */}
         <div className="absolute inset-0 -z-10">

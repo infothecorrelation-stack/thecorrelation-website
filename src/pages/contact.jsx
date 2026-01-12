@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>Contact Us | TheCorrelation</title>
+        <title>Contact TheCorrelation | AI & Data Science Institute in Indore</title>
 
         <meta
           name="description"

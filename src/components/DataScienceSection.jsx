@@ -88,12 +88,12 @@ const DataScienceSection = () => {
               
               {/* Heading and Introduction */}
               <header className="space-y-4 sm:space-y-6">
-                <h1 
+                <h2 
                   id="data-science-heading"
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
                 >
                   What is Data Science?
-                </h1>
+                </h2>
 
                 <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
                   Data Science is the{" "}

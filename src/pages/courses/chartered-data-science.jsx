@@ -65,156 +65,9 @@ const CharteredDataScience = () => {
   { title: "10 Months", label: "Program Duration" },
 ];
   
-    const progressBars = [
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-    ];
-
-    const highlights = [
-        {
-          icon: <CheckCircle className="w-8 h-8 text-green-600" />,
-          bg: 'bg-green-100',
-          title: 'Guaranteed Placement or Your Money Back',
-          desc: '100% job guarantee with full refund if we don’t place you within 6 months of course completion.',
-        },
-        {
-          icon: <Wallet className="w-8 h-8 text-blue-600" />,
-          bg: 'bg-blue-100',
-          title: 'Paid Internship During Program',
-          desc: 'Earn while you learn with our paid internship opportunities during the course.',
-        },
-        {
-          icon: <GraduationCap className="w-8 h-8 text-purple-600" />,
-          bg: 'bg-purple-100',
-          title: 'Pay During the Program — No Hidden Charges',
-          desc: 'Transparent pricing with flexible payment options and no surprise fees.',
-        },
-        {
-          icon: <User className="w-8 h-8 text-orange-600" />,
-          bg: 'bg-orange-100',
-          title: 'Taught by Industry Experts (IIT Faculty)',
-          desc: 'Learn from the best with our faculty from top IIT institutions and industry leaders.',
-        },
-        {
-          icon: <BarChart3 className="w-8 h-8 text-red-600" />,
-          bg: 'bg-red-100',
-          title: 'Hands-on Learning with Real Projects',
-          desc: 'Build your portfolio with real-world projects from day one of the program.',
-        },
-        {
-          icon: <Trophy className="w-8 h-8 text-yellow-600" />,
-          bg: 'bg-yellow-100',
-          title: 'Globally Recognized Certifications',
-          desc: 'Earn industry-recognized certifications that employers value worldwide.',
-        },
-      ];
-
-      const cards = [
-    {
-      title: 'Final-year students & Freshers',
-      desc: 'Launch your career in data science',
-      icon: <GraduationCap className="w-8 h-8 text-white" />,
-      bg: 'from-blue-50 to-blue-100',
-      iconBg: 'bg-blue-500',
-    },
-    {
-      title: 'Working Professionals',
-      desc: 'Upskill for better opportunities',
-      icon: <Briefcase className="w-8 h-8 text-white" />,
-      bg: 'from-green-50 to-green-100',
-      iconBg: 'bg-green-500',
-    },
-    {
-      title: 'Non-tech Graduates',
-      desc: 'Transition into tech seamlessly',
-      icon: <User className="w-8 h-8 text-white" />,
-      bg: 'from-purple-50 to-purple-100',
-      iconBg: 'bg-purple-500',
-    },
-    {
-      title: 'Career Switchers',
-      desc: 'Make the switch with confidence',
-      icon: <RefreshCw className="w-8 h-8 text-white" />,
-      bg: 'from-orange-50 to-orange-100',
-      iconBg: 'bg-orange-500',
-    },
-  ];
-  
-  const steps = [
-      {
-        icon: Phone,
-        color: 'blue',
-        step: 'Step 1',
-        title: 'Connect with Our Experts',
-        desc: 'Schedule a free consultation to discuss your career goals and program fit.',
-      },
-      {
-        icon: List,
-        color: 'green',
-        step: 'Step 2',
-        title: 'Registration & Profile Evaluation',
-        desc: 'Complete your registration and get your profile evaluated by our admission team.',
-      },
-      {
-        icon: Award,
-        color: 'purple',
-        step: 'Step 3',
-        title: 'Scholarship Assessment',
-        desc: 'Take our aptitude test and profile assessment for scholarship opportunities.',
-      },
-      {
-        icon: Wallet,
-        color: 'orange',
-        step: 'Step 4',
-        title: 'Fee & EMI Options',
-        desc: 'Receive personalized fee structure and flexible EMI payment options.',
-      },
-      {
-        icon: GraduationCap,
-        color: 'red',
-        step: 'Step 5',
-        title: '9 Months Curriculum',
-        desc: 'Intensive learning with live classes, projects, and hands-on experience.',
-      },
-      {
-        icon: Briefcase,
-        color: 'indigo',
-        step: 'Step 6',
-        title: 'Paid Internship',
-        desc: 'Gain real industry experience with our paid internship program.',
-      },
-      {
-        icon: Trophy,
-        color: 'yellow',
-        step: 'Step 7',
-        title: 'Job Placement & Certification',
-        desc: 'Get placed in top companies with our 100% job guarantee and receive your certification.',
-        fullWidth: true,
-      },
-    ];
-
-    useEffect(() => {
-    const toggles = document.querySelectorAll('.faq-toggle');
-
-    toggles.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const content = btn.nextElementSibling;
-        const chevron = btn.querySelector('.faq-chevron');
-
-        if (content.classList.contains('hidden')) {
-          content.classList.remove('hidden');
-          chevron.style.transform = 'rotate(180deg)';
-        } else {
-          content.classList.add('hidden');
-          chevron.style.transform = 'rotate(0deg)';
-        }
-      });
-    });
-  }, []);
+    
+    
+   
 
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -301,24 +154,84 @@ const toggleFAQ = (index) => {
   return (
     <div>
       <Head>
-        {/* Page Title */}
-        <title>Chartered Data Science Program | TheCorrelation</title>
+  {/* Page Title */}
+  <title>
+    Chartered Data Science Program | TheCorrelation
+  </title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Join TheCorrelation's Chartered Data Science Program. Master Python, Machine Learning, Deep Learning, and AI with real-world projects and industry mentorship."
-        />
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="TheCorrelation’s Chartered Data Science Program in Indore helps you master Python, Statistics, Machine Learning, Deep Learning, and AI through real-world projects and expert mentorship."
+  />
 
-        {/* Keywords */}
-        <meta
-          name="keywords"
-          content="Chartered Data Science, Data Science Program, AI Course, Machine Learning, TheCorrelation"
-        />
+  {/* Keywords */}
+  <meta
+    name="keywords"
+    content="chartered data science program, data science course indore, ai data science program, machine learning course, thecorrelation"
+  />
 
-        {/* Canonical URL */}
-        
-      </Head>
+  {/* Canonical URL (Must match Navbar) */}
+  <link
+    rel="canonical"
+    href="https://thecorrelation.in/courses/chartered-data-science"
+  />
+
+  {/* Indexing */}
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large"
+  />
+
+  {/* Local SEO */}
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Indore" />
+
+  {/* Brand Authority */}
+  <meta name="author" content="TheCorrelation" />
+  <meta name="publisher" content="TheCorrelation" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TheCorrelation" />
+  <meta
+    property="og:title"
+    content="Chartered Data Science Program | TheCorrelation"
+  />
+  <meta
+    property="og:description"
+    content="Become an industry-ready data science professional with TheCorrelation’s Chartered Data Science Program."
+  />
+  <meta
+    property="og:url"
+    content="https://thecorrelation.in/courses/chartered-data-science"
+  />
+  <meta
+    property="og:image"
+    content="https://thecorrelation.in/og-chartered-ds.png"
+  />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Chartered Data Science Program | TheCorrelation"
+  />
+  <meta
+    name="twitter:description"
+    content="Master Data Science, Machine Learning and AI with real-world projects at TheCorrelation."
+  />
+  <meta
+    name="twitter:image"
+    content="https://thecorrelation.in/og-chartered-ds.png"
+  />
+
+  {/* Mobile */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</Head>
+
        <section className="relative text-white">
       
         {/* Optimized Background Image */}

@@ -37,14 +37,7 @@ const PostGraduation2 = () => {
   { title: "3 Months", label: "Program Duration" },
 ];
 
-    const progressBars = [
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-      { course: "Python Fundamentals", percent: 85, color: "bg-blue-500" },
-      { course: "Machine Learning", percent: 60, color: "bg-purple-500" },
-      { course: "Data Visualization", percent: 40, color: "bg-yellow-500" },
-    ];
+    
   
     
 
@@ -130,145 +123,87 @@ const toggleFAQ = (index) => {
 };
 
 
- const topics = [
-  
-  {
-    title: 'English for Communication',
-    description: 'Speak clearly and confidently in any setting.',
-    icon: <Languages className="text-orange-500 w-8 h-8" />,
-  },
-  {
-    title: 'Vocabulary + Grammar Boost',
-    description: 'Expand your word power and build strong grammar.',
-    icon: <BookText className="text-yellow-500 w-8 h-8" />,
-  },
-  {
-    title: 'Roleplay Sessions',
-    description: 'Practice real-world workplace scenarios.',
-    icon: <Users className="text-purple-500 w-8 h-8" />,
-  },
-  {
-    title: 'Soft Skills & Teamwork',
-    description: 'Develop strong interpersonal and team skills.',
-    icon: <Volume2 className="text-blue-500 w-8 h-8" />,
-  },
-  {
-    title: 'Resume & Job Applications',
-    description: 'Craft standout resumes and effective job forms.',
-    icon: <FileText className="text-pink-500 w-8 h-8" />,
-  },
-  {
-    title: 'Interview Preparation',
-    description: 'Crack every round with expert interview tips.',
-    icon: <ClipboardList className="text-green-500 w-8 h-8" />,
-  },
-  {
-    title: 'Career Readiness',
-    description: 'Become confident, articulate, and job-ready.',
-    icon: <BadgeCheck className="text-red-500 w-8 h-8" />,
-  },
-];
-
-
-  
-
-  const steps = [
-    {
-      icon: Phone,
-      color: 'blue',
-      step: 'Step 1',
-      title: 'Connect with Our Experts',
-      desc: 'Schedule a free consultation to discuss your career goals and program fit.',
-    },
-    {
-      icon: List,
-      color: 'green',
-      step: 'Step 2',
-      title: 'Registration & Profile Evaluation',
-      desc: 'Complete your registration and get your profile evaluated by our admission team.',
-    },
-    {
-      icon: Award,
-      color: 'purple',
-      step: 'Step 3',
-      title: 'Scholarship Assessment',
-      desc: 'Take our aptitude test and profile assessment for scholarship opportunities.',
-    },
-    {
-      icon: Wallet,
-      color: 'orange',
-      step: 'Step 4',
-      title: 'Fee & EMI Options',
-      desc: 'Receive personalized fee structure and flexible EMI payment options.',
-    },
-    {
-      icon: GraduationCap,
-      color: 'red',
-      step: 'Step 5',
-      title: '9 Months Curriculum',
-      desc: 'Intensive learning with live classes, projects, and hands-on experience.',
-    },
-    {
-      icon: Briefcase,
-      color: 'indigo',
-      step: 'Step 6',
-      title: 'Paid Internship',
-      desc: 'Gain real industry experience with our paid internship program.',
-    },
-    {
-      icon: Trophy,
-      color: 'yellow',
-      step: 'Step 7',
-      title: 'Job Placement & Certification',
-      desc: 'Get placed in top companies with our 100% job guarantee and receive your certification.',
-      fullWidth: true,
-    },
-  ];
-
-
-  
-
-
-
-  
-
-
-
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
-  const [loading, setLoading] = useState(false);
-
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-
-
   return (
     <div>
        <Head>
-        {/* Title */}
-        <title>Certification Program in Applied Data Analytics | TheCorrelation</title>
+  {/* Title */}
+  <title>
+    Applied Data Analytics Course | TheCorrelation
+  </title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Join TheCorrelation's Certification Program in Applied Data Analytics. Master SQL, Python, Power BI, Tableau, and Analytics through real-world projects and expert mentorship."
-        />
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="TheCorrelation’s Applied Data Analytics Course in Indore teaches SQL, Python, Power BI, Tableau, and Analytics through real-world projects with expert mentorship."
+  />
 
-        {/* Keywords */}
-        <meta
-          name="keywords"
-          content="Applied Data Analytics Course, Data Analytics Certification, SQL, Power BI, Tableau, Python Analytics"
-        />
+  {/* Keywords */}
+  <meta
+    name="keywords"
+    content="applied data analytics course, data analytics certification, sql course, power bi course, tableau course, python analytics, thecorrelation"
+  />
 
-        
-      </Head>
+  {/* Canonical URL (match Navbar) */}
+  <link
+    rel="canonical"
+    href="https://thecorrelation.in/courses/applied-data-analytics"
+  />
+
+  {/* Indexing */}
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large"
+  />
+
+  {/* Local SEO */}
+  <meta name="geo.region" content="IN-MP" />
+  <meta name="geo.placename" content="Indore" />
+
+  {/* Brand Authority */}
+  <meta name="author" content="TheCorrelation" />
+  <meta name="publisher" content="TheCorrelation" />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TheCorrelation" />
+  <meta
+    property="og:title"
+    content="Applied Data Analytics Course | TheCorrelation"
+  />
+  <meta
+    property="og:description"
+    content="Master SQL, Python, Power BI, Tableau, and Analytics with TheCorrelation’s Applied Data Analytics Course through real-world projects."
+  />
+  <meta
+    property="og:url"
+    content="https://thecorrelation.in/courses/applied-data-analytics"
+  />
+  <meta
+    property="og:image"
+    content="https://thecorrelation.in/og-applied-data-analytics.png"
+  />
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="Applied Data Analytics Course | TheCorrelation"
+  />
+  <meta
+    name="twitter:description"
+    content="Learn SQL, Python, Power BI, Tableau, and Analytics through real-world projects at TheCorrelation."
+  />
+  <meta
+    name="twitter:image"
+    content="https://thecorrelation.in/og-applied-data-analytics.png"
+  />
+
+  {/* Mobile */}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</Head>
+
     <section className="relative text-white">
 
   {/* Optimized Background Image */}
