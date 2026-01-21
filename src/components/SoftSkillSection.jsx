@@ -33,25 +33,17 @@ export default function CommunicationCarousel() {
       title: 'Resume Building',
       desc: 'Create impactful resumes and digital portfolios that showcase your skills, experience, and personal brand, tailored for your target industry.',
     },
-    {
-      icon: <Settings className="w-6 h-6 text-white" />,
-      title: 'Group Discussion',
-      desc: 'Master group communication with active listening, logical structuring, conflict resolution, and assertive yet respectful participation techniques.',
-    },
+   
     {
       icon: <Zap className="w-6 h-6 text-white" />,
       title: 'Personal Branding',
       desc: 'Build a strong professional identity online and offline, understand how to market your unique strengths, and grow your network strategically.',
     },
-    {
-      icon: <BarChart className="w-6 h-6 text-white" />,
-      title: 'Time Management',
-      desc: 'Prioritize tasks, set realistic goals, and implement productivity frameworks like Pomodoro and Eisenhower Matrix for efficient daily planning.',
-    },
+    
   ];
 
   return (
-    <section className="py-16 bg-gray-100 overflow-hidden">
+    <section className=" bg-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
           Master Communication & Career Readiness
@@ -83,7 +75,7 @@ export default function CommunicationCarousel() {
         >
           {cards.map((card, idx) => (
             <SwiperSlide key={idx}>
-              <div className="bg-white  h-[250px] md:h-[250px] rounded-2xl p-6 px-2 shadow-xl transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
+              <div className="bg-white mb-5 h-[250px] md:h-[250px] rounded-2xl p-6 px-2 shadow-xl transition-transform transform hover:-translate-y-2 hover:shadow-2xl">
                 <div className="mb-5 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center">
                     {card.icon}

@@ -1,4 +1,4 @@
-"use client"
+
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -51,44 +51,51 @@ const Home = () => {
     <div >
       <Head>
   {/* Primary SEO */}
- <title>Industry-Ready Data Science, AI & ML Courses in Indore | TheCorrelation</title>
-
+  <title>
+    Data Science & AI Courses in Indore | TheCorrelation School of AI & Data Science
+  </title>
 
   <meta
     name="description"
-    content="TheCorrelation is an AI, Machine Learning and Data Science institute in Indore, India offering industry-ready programs with real-world projects, expert mentors, and placement support."
+    content="Looking for Data Science & AI courses in Indore? TheCorrelation School of AI & Data Science offers industry-ready programs in Data Science, AI, Machine Learning & Generative AI with real projects and placement support."
   />
 
-  <link rel="canonical" href="https://thecorrelation.in" />
+  <link rel="canonical" href="https://thecorrelation.in/" />
 
   {/* Search Engine Indexing */}
   <meta name="robots" content="index, follow" />
-  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta
+    name="googlebot"
+    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  />
 
-  {/* Geo / Local SEO */}
+  {/* Local SEO – Indore */}
   <meta name="geo.region" content="IN-MP" />
   <meta name="geo.placename" content="Indore" />
   <meta name="geo.position" content="22.7196;75.8577" />
   <meta name="ICBM" content="22.7196, 75.8577" />
 
   {/* Brand / Trust */}
-  <meta name="author" content="TheCorrelation" />
-  <meta name="publisher" content="TheCorrelation" />
+  <meta name="author" content="TheCorrelation School of AI & Data Science" />
+  <meta name="publisher" content="TheCorrelation School of AI & Data Science" />
   <meta name="application-name" content="TheCorrelation" />
 
-  {/* Keywords (AI Scraper Friendly) */}
+  {/* Keywords (Secondary Signal Only) */}
   <meta
     name="keywords"
-    content="data science institute in indore, ai course indore, machine learning course indore, generative ai course, business analytics course, thecorrelation"
+    content="data science courses in indore, ai courses in indore, data science institute in indore, machine learning course indore, generative ai course indore, thecorrelation"
   />
 
-  {/* Open Graph (Social + AI previews) */}
+  {/* Open Graph */}
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="TheCorrelation" />
-  <meta property="og:title" content="Industry-Ready Data Science, AI & ML Courses in Indore | TheCorrelation" />
+  <meta property="og:site_name" content="TheCorrelation School of AI & Data Science" />
+  <meta
+    property="og:title"
+    content="Data Science & AI Courses in Indore | TheCorrelation School of AI & Data Science"
+  />
   <meta
     property="og:description"
-    content="TheCorrelation is an AI, Machine Learning and Data Science institute in Indore offering industry-ready programs with real-world projects and placement support."
+    content="Top Data Science & AI institute in Indore offering hands-on training, real-world projects, expert mentors and placement support."
   />
   <meta property="og:url" content="https://thecorrelation.in/" />
   <meta property="og:image" content="https://thecorrelation.in/og-image.png" />
@@ -96,10 +103,13 @@ const Home = () => {
 
   {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Industry-Ready Data Science, AI & ML Courses in Indore | TheCorrelation" />
+  <meta
+    name="twitter:title"
+    content="Data Science & AI Courses in Indore | TheCorrelation School of AI & Data Science"
+  />
   <meta
     name="twitter:description"
-    content="Industry-ready AI, ML and Data Science programs in Indore with real projects, mentors and placement support."
+    content="Join the best Data Science & AI courses in Indore with industry projects and placement support."
   />
   <meta name="twitter:image" content="https://thecorrelation.in/og-image.png" />
 
@@ -111,6 +121,8 @@ const Home = () => {
   <link rel="icon" href="/Top-logo1.png" />
   <link rel="apple-touch-icon" href="/Top-logo1.png" />
 </Head>
+
+
 
 
       {/* Hero Section */}

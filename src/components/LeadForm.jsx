@@ -270,7 +270,7 @@ const LeadForm = () => {
               <div className="space-y-6">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    {courseDisplayName ? `Apply for ${courseDisplayName}` : "Let's Get Started"}
+                    {courseDisplayName ? `Enquire for ${courseDisplayName}` : "Let's Get Started"}
                   </h2>
                   <p className="text-gray-600">Just a minute to get started</p>
                   
@@ -389,7 +389,7 @@ const LeadForm = () => {
                       : "bg-green-600 hover:shadow-lg transform hover:scale-105"
                   } text-white`}
                 >
-                  {isSubmitting ? "Submitting..." : "Apply Now"}
+                  {isSubmitting ? "Submitting..." : "Enquire Now"}
                 </button>
               </div>
             ) : (

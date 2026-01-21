@@ -1,19 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Leaf,
-  TrendingUp,
-  Rocket,
-  Target,
-  BookOpen,
-  CheckCircle
-} from "lucide-react";
+import React from "react";
+import { BookOpen } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 export default function DataScienceCurriculum() {
-  const defaultConfig = {
-    main_title: "Certified Data Scientist Program",
-    subtitle: "Master the complete data science journey from fundamentals to expert-level skills",
-    certification_title: "Become a Certified Data Scientist 🎓"
-  };
+
+  const phases = [
+    {
+      phase: "Phase 1: Data Analytics Professional",
+      modules: [1, 2, 3, 4],
+    },
+    {
+      phase: "Phase 2: Machine Learning Practitioner",
+      modules: [5, 6, 7],
+    },
+    {
+      phase: "Phase 3: Advanced ML Specialist",
+      modules: [8,9, 10],
+    },
+    {
+      phase: "Phase 4: AI & Deep Learning Engineer",
+      modules: [11, 12, 13],
+    },
+    {
+      phase: "Phase 5: Applied Data Science Professional",
+      modules: [14, 15, 16],
+    },
+  ];
 
   const modules = [
   {
@@ -26,9 +40,9 @@ export default function DataScienceCurriculum() {
     topics: [
       "What is Data Science?",
       "Data Science Lifecycle",
-      "Industry Use Cases",
-      "Roles & Skills Overview",
-      "Tools & Tech Stack"
+      "Math & Statistics Basics",
+      "Statistical Analysis with MS Excel",
+      "Statistics for Data Science"
     ]
   },
   {
@@ -42,8 +56,8 @@ export default function DataScienceCurriculum() {
       "Variables & Data Types",
       "Conditional Statements",
       "Loops & Functions",
-      "Data Structures Basics",
-      "Python Best Practices"
+      "Exceptional Handling",
+      "Practice Problems & Python Best Practices"
     ]
   },
   {
@@ -55,10 +69,10 @@ export default function DataScienceCurriculum() {
     objective: "Analyze datasets using Python libraries",
     topics: [
       "NumPy Fundamentals",
-      "Pandas DataFrames",
-      "Data Filtering",
-      "Aggregation & Grouping",
-      "Exploratory Analysis"
+      "Pandas Data Frames",
+      "Data Filtering, Aggregation & Grouping",
+      "Data Visualization with Matplotlib & Seaborn",
+      "Advanced Visualization with Plotly"
     ]
   },
   {
@@ -69,11 +83,11 @@ export default function DataScienceCurriculum() {
     image: "/Applied-data-analytics-4.png",
     objective: "Apply analytics techniques to real-world datasets",
     topics: [
-      "Business Metrics",
+      "Exploratory Data Analysis",
       "Data Cleaning",
-      "Case Studies",
-      "KPI Analysis",
-      "Insights & Reporting"
+      "SQL",
+      "Power BI",
+      "DAX Queries"
     ]
   },
   {
@@ -84,11 +98,11 @@ export default function DataScienceCurriculum() {
     image: "/Introduction-to-machine-learning-5.png",
     objective: "Learn core machine learning concepts and workflows",
     topics: [
-      "ML Overview",
-      "Supervised vs Unsupervised",
-      "Training Pipelines",
-      "Bias–Variance Tradeoff",
-      "Model Evaluation"
+      "Introduction to Machine Learning",
+      "Supervised vs Unsupervised Learning",
+      "Linear Regression",
+      "Logistic Regression",
+      "Model Evaluation Techniques"
     ]
   },
   {
@@ -99,11 +113,11 @@ export default function DataScienceCurriculum() {
     image: "/Practical-ml-models-6.png",
     objective: "Build and evaluate real-world ML models",
     topics: [
-      "Linear & Logistic Regression",
-      "Decision Trees",
-      "KNN",
-      "Naive Bayes",
-      "Model Comparison"
+      "K-Nearest Neighbors (KNN)",
+      "K-Means Clustering",
+      "Principal Component Analysis (PCA)",
+      "Decision Tree",
+      "Random Forest"
     ]
   },
   {
@@ -114,11 +128,11 @@ export default function DataScienceCurriculum() {
     image: "/Advanced-ml-7.png",
     objective: "Improve model performance using advanced techniques",
     topics: [
-      "Ensemble Learning",
-      "Bagging & Boosting",
-      "Random Forests",
-      "Gradient Boosting",
-      "Hyperparameter Tuning"
+      "Data Handling",
+      "Data Structures and Algorithms",
+      "Linear & Non-Linear Data Structures",
+      "Model Handling",
+      "Naïve Bayes"
     ]
   },
   {
@@ -129,16 +143,16 @@ export default function DataScienceCurriculum() {
     image: "/Advanced-ml-8.png",
     objective: "Master industry-grade machine learning algorithms",
     topics: [
-      "XGBoost",
-      "LightGBM",
-      "CatBoost",
-      "Feature Importance",
-      "Model Optimization"
+      "Support Vector Machine (SVM)",
+      "Advanced Clustering Algorithms",
+      "T-SNE, DBSCAN & Hierarchical Clustering",
+      "Ensemble Learning",
+      "Optimization & Regularization"
     ]
   },
   {
     id: 9,
-    title: "Advanced Statistics",
+    title: "Advanced Statistics and Time Series",
     level: "advanced",
     color: "#dc2626",
     image: "/Advanced-statistics-9.png",
@@ -146,24 +160,24 @@ export default function DataScienceCurriculum() {
     topics: [
       "Probability Distributions",
       "Hypothesis Testing",
-      "Confidence Intervals",
-      "ANOVA",
-      "Statistical Inference"
+      "Principles of Stationarity",
+      "Time Series Decomposition",
+      "Time Series Models"
     ]
   },
   {
     id: 10,
-    title: "Neural Networks",
+    title: "Neural Networks and Deep Learning",
     level: "advanced",
     color: "#dc2626",
     image: "/Neural-network-10.png",
     objective: "Understand neural network fundamentals",
     topics: [
-      "Perceptrons",
-      "Backpropagation",
+      "Basics of Deep Learning & TensorFlow",
+      "Perceptron",
       "Activation Functions",
       "Loss Functions",
-      "Optimization Algorithms"
+      "Model Evaluation in Deep Learning"
     ]
   },
   {
@@ -174,11 +188,11 @@ export default function DataScienceCurriculum() {
     image: "/Computer-vision-11.png",
     objective: "Build vision-based AI systems",
     topics: [
-      "Image Processing",
       "CNN Architectures",
+      "OpenCV",
+      "Image Processing",
       "Object Detection",
-      "Image Classification",
-      "Transfer Learning"
+      "Image Classification"
     ]
   },
   {
@@ -187,13 +201,13 @@ export default function DataScienceCurriculum() {
     level: "advanced",
     color: "#dc2626",
     image: "/Natural-language-processing-12.png",
-    objective: "Process and analyze textual data using NLP",
+    objective: "Process and analyse textual data using NLP",
     topics: [
       "Text Preprocessing",
-      "Word Embeddings",
-      "Sentiment Analysis",
-      "NER",
-      "Transformers Basics"
+      "TF-IDF & Word2Vec Embeddings",
+      "Recurrent Neural Networks (RNN)",
+      "LSTM & GRU",
+      "Transformers"
     ]
   },
   {
@@ -205,10 +219,10 @@ export default function DataScienceCurriculum() {
     objective: "Build applications using Generative AI & LLMs",
     topics: [
       "LLM Fundamentals",
-      "Prompt Engineering",
+      "GANs",
       "RAG Pipelines",
-      "OpenAI APIs",
-      "GenAI Use Cases"
+      "LangChain",
+      "Generative AI Use Cases"
     ]
   },
   {
@@ -223,7 +237,7 @@ export default function DataScienceCurriculum() {
       "Requests",
       "Scrapy",
       "APIs",
-      "Data Storage"
+      "Selenium Basics"
     ]
   },
   {
@@ -234,8 +248,8 @@ export default function DataScienceCurriculum() {
     image: "/Model-deployment-15.png",
     objective: "Deploy ML models to production",
     topics: [
-      "Flask & FastAPI",
-      "Docker",
+      "AWS Basics",
+      "Flask",
       "Cloud Deployment",
       "Model Monitoring",
       "CI/CD Basics"
@@ -258,88 +272,132 @@ export default function DataScienceCurriculum() {
   }
 ];
 
+  const getModulesByIds = (ids) =>
+    modules.filter((m) => ids.includes(m.id));
+
   return (
-    <div className="min-h-screen w-full bg-gray-100 text-gray-900 overflow-auto">
+    <section className="bg-gray-100 py-16">
+      <div className="max-w-7xl mx-auto px-4">
 
-      <header className="text-center py-8 px-4 md:py-12">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-gray-900">
-          {defaultConfig.main_title}
-        </h1>
-        <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-          {defaultConfig.subtitle}
-        </p>
-      </header>
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            Certified Data Scientist Program
+          </h1>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            A phase-wise, industry-aligned learning journey from fundamentals to deployment
+          </p>
+        </div>
 
-      <div className="px-4 md:px-8 pb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 max-w-7xl mx-auto">
-          {modules.map((module) => {
+        {/* PHASES */}
+        <div className="space-y-20">
+
+          {phases.map((phase, idx) => {
+            const phaseModules = getModulesByIds(phase.modules);
+
             return (
-              <div
-                key={module.id}
-                className="group cursor-pointer transition-transform hover:-translate-y-2"
-              >
-                <div
-                  className="bg-white rounded-xl overflow-hidden border border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full"
-                  
-                >
-                  {/* Square Image Section */}
-                  <div className="relative aspect-square w-full h-[420px] overflow-hidden bg-gray-50">
-                    <img
-                      src={module.image}
-                      alt={module.title}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+              <div key={idx}>
 
-                    <div
-                      className="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white"
-                      style={{ background: module.color }}
-                    >
-                      {module.id}
-                    </div>
-                  </div>
+                {/* Phase Title */}
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+                  {phase.phase}
+                </h2>
 
-                  {/* Card Content */}
-                  <div className="p-5 flex flex-col flex-1">
-                    <h3 className="font-bold text-lg mb-2 text-gray-900">
-                      {module.title}
-                    </h3>
+                {/* MOBILE – Swiper */}
+                <div className="block md:hidden">
+  <Swiper
+    modules={[Autoplay]}
+    spaceBetween={16}
+    slidesPerView={1.1}
+    loop={true}
+    autoplay={{
+      delay: 2500, // ⏱️ change speed if needed
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
+    }}
+  >
+    {phaseModules.map((module) => (
+      <SwiperSlide key={module.id}>
+        <ModuleCard module={module} />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
 
-                    <p className="text-sm text-gray-600 mb-4">
-                      {module.objective}
-                    </p>
-
-                    <ul className="space-y-1.5 mt-auto">
-                      {module.topics.map((topic, i) => (
-                        <li
-                          key={i}
-                          className="flex gap-2 text-xs text-gray-600"
-                        >
-                          <BookOpen
-                            className="w-3.5 h-3.5 shrink-0"
-                            style={{ color: module.color }}
-                          />
-                          <span className="line-clamp-1">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
+                {/* DESKTOP – Grid */}
+                <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                  {phaseModules.map((module) => (
+                    <ModuleCard key={module.id} module={module} />
+                  ))}
                 </div>
+
               </div>
             );
           })}
+
         </div>
-      </div>
 
-      <div className="text-center py-12 px-4 bg-gray-100">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900">
-          Complete All 16 Modules
-        </h2>
-        <p className="text-xl md:text-2xl text-red-600 font-semibold">
-          {defaultConfig.certification_title}
-        </p>
-      </div>
+        {/* Footer CTA */}
+        <div className="text-center mt-10">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+            Complete All 16 Modules
+          </h3>
+          <p className="text-xl text-red-600 font-semibold">
+            Become a Certified Data Scientist 🎓
+          </p>
+        </div>
 
-    </div>
+      </div>
+    </section>
   );
 }
+
+/* ---------------- CARD COMPONENT ---------------- */
+
+const ModuleCard = ({ module }) => {
+  return (
+    <div className="group transition-transform hover:-translate-y-2">
+      <div className="bg-white rounded-xl overflow-hidden border border-red-500 hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+
+        {/* Image */}
+        <div className="relative aspect-square h-[380px] bg-gray-50 overflow-hidden">
+          <img
+            src={module.image}
+            alt={module.title}
+            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+          <div
+            className="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white"
+            style={{ background: module.color }}
+          >
+            {module.id}
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-5 flex flex-col flex-1">
+          <h3 className="font-bold text-lg mb-2 text-gray-900">
+            {module.title}
+          </h3>
+
+          <p className="text-sm text-gray-600 mb-4">
+            {module.objective}
+          </p>
+
+          <ul className="space-y-1.5 mt-auto">
+            {module.topics.map((topic, i) => (
+              <li key={i} className="flex gap-2 text-xs text-gray-600">
+                <BookOpen
+                  className="w-3.5 h-3.5 shrink-0"
+                  style={{ color: module.color }}
+                />
+                <span className="line-clamp-1">{topic}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  );
+};

@@ -17,8 +17,8 @@ export default function CareerExpertCTA() {
                   }}
           
           className="bg-transparent border-2 border-white text-white hover:bg-green-600 hover:text-white font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 hover:scale-105 flex items-center gap-3">
-            <PhoneCall className="w-6 h-6" />
-            Talk to Career Expert
+            
+           Enquire Now
           </button>
         </div>
       </div>

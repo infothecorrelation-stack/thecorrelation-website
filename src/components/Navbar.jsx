@@ -117,7 +117,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
   ];
 
   const careerLinks = [
-    { label: "Elevate Program", path: "/courses/elevate-program" },
+    { label: "Elevate Program In Appled Data Science", path: "/courses/elevate-program" },
   ];
 
   const aboutLinks = [
@@ -345,7 +345,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               Elevated Programs
                             </h3>
                             <p className="text-gray-400 text-xs mb-2">
-                             Career Boost + Self-paced
+                             Career Boost + Weekend Live Classes
                             </p>
                             <div className="flex flex-wrap gap-1 mb-2">
                               <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
@@ -490,18 +490,34 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <Link
-            href="https://studentportal.thecorrelation.co.in/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
-              isLightBackground
-                ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
-                : "bg-white text-black border-2 border-white"
-            }`}
-          >
-            Student Login
-          </Link>
+          <div className="flex gap-4">
+  <Link
+    href="https://studentportal.thecorrelation.co.in/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
+      isLightBackground
+        ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
+        : "bg-white text-black border-2 border-white"
+    }`}
+  >
+    Verify Certificate
+  </Link>
+
+  <Link
+    href="https://studentportal.thecorrelation.co.in/login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
+      isLightBackground
+        ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
+        : "bg-white text-black border-2 border-white"
+    }`}
+  >
+    Student Login
+  </Link>
+</div>
+
         </motion.div>
 
         {/* Mobile Icon */}
@@ -908,6 +924,20 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
 
               {/* Mobile Login */}
               <motion.div variants={navItemVariants} custom={6}>
+                <div className="flex gap-4">
+                <Link
+                  href="https://studentportal.thecorrelation.co.in/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full text-center px-4 py-2 rounded-md border font-medium transition duration-300 ${
+                    isLightBackground
+                      ? "border-gray-900 bg-gray-900 text-white hover:bg-white hover:text-gray-900"
+                      : "border-white bg-transparent text-white hover:bg-white hover:text-black"
+                  }`}
+                  onClick={toggleMobileMenu}
+                >
+                  Verify Certificate
+                </Link>
                 <Link
                   href="https://studentportal.thecorrelation.co.in/login"
                   target="_blank"
@@ -921,6 +951,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                 >
                   Student Login
                 </Link>
+                </div>
               </motion.div>
             </div>
           </motion.div>

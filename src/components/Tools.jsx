@@ -39,7 +39,7 @@ const Tools = () => {
     { icon: <SiKeras className="text-red-500 text-5xl" />, name: "Keras" },
     { icon: <SiPytorch className="text-red-600 text-5xl" />, name: "PyTorch" },
     { icon: <SiMysql className="text-blue-600 text-5xl" />, name: "MySQL" },
-    { icon: <SiMongodb className="text-green-600 text-5xl" />, name: "MongoDB" },
+    
     { icon: <SiJupyter className="text-orange-400 text-5xl" />, name: "Jupyter Notebook" },
     { icon: <SiTableau className="text-blue-700 text-5xl" />, name: "Tableau" },
     { icon: <FaChartBar className="text-yellow-500 text-5xl" />, name: "Power BI" },
@@ -47,11 +47,11 @@ const Tools = () => {
     { icon: <SiGit className="text-orange-600 text-5xl" />, name: "Git" },
     { icon: <SiGithub className="text-gray-800 text-5xl" />, name: "GitHub" },
     { icon: <SiGooglecloud className="text-blue-500 text-5xl" />, name: "Google Cloud" },
-    { icon: <SiAmazon className="text-yellow-600 text-5xl" />, name: "AWS" },
+   
    
     { icon: <SiKaggle className="text-blue-400 text-5xl" />, name: "Kaggle" },
     { icon: <SiOpencv className="text-green-500 text-5xl" />, name: "OpenCV" },
-    { icon: <FaRobot className="text-gray-600 text-5xl" />, name: "AI Robotics" },
+    
     { icon: <FaBrain className="text-pink-500 text-5xl" />, name: "Deep Learning" },
     { icon: <PiMathOperationsBold className="text-purple-600 text-5xl" />, name: "Mathematics" },
     { icon: <FaChartLine className="text-green-700 text-5xl" />, name: "Business Analytics" },
