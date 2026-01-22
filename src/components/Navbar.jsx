@@ -492,7 +492,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
         >
           <div className="flex gap-4">
   <Link
-    href="https://studentportal.thecorrelation.co.in/login"
+    href="https://forms.office.com/r/UKFvBM0iJ6"
     target="_blank"
     rel="noopener noreferrer"
     className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
@@ -926,7 +926,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
               <motion.div variants={navItemVariants} custom={6}>
                 <div className="flex gap-4">
                 <Link
-                  href="https://studentportal.thecorrelation.co.in/login"
+                  href="https://forms.office.com/r/UKFvBM0iJ6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full text-center px-4 py-2 rounded-md border font-medium transition duration-300 ${

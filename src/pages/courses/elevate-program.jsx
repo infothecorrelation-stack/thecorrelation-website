@@ -53,7 +53,6 @@ import {
   Layers,
   Network,
   Linkedin,
-  
 } from "lucide-react";
 
 import Image from "next/image";
@@ -264,80 +263,86 @@ const PostGraduation2 = () => {
     <div>
       {/* 🔥 SEO META TAGS */}
       <Head>
-  {/* Primary SEO */}
-  <title>
-    Data Science & AI Online Weekend Course for Professionals | Elevate Program – TheCorrelation
-  </title>
+        {/* Primary SEO */}
+        <title>
+          Data Science & AI Online Weekend Course for Professionals | Elevate
+          Program – TheCorrelation
+        </title>
 
-  <meta
-    name="description"
-    content="Join the Data Science & AI Online Weekend Course for working professionals by TheCorrelation. Master Python, SQL, Machine Learning, Deep Learning and Generative AI through live classes, real-world projects and expert mentorship."
-  />
+        <meta
+          name="description"
+          content="Join the Data Science & AI Online Weekend Course for working professionals by TheCorrelation. Master Python, SQL, Machine Learning, Deep Learning and Generative AI through live classes, real-world projects and expert mentorship."
+        />
 
-  <meta
-    name="keywords"
-    content="data science online course for professionals, data science weekend course, ai course for working professionals, machine learning online course, data science elevate program, thecorrelation"
-  />
+        <meta
+          name="keywords"
+          content="data science online course for professionals, data science weekend course, ai course for working professionals, machine learning online course, data science elevate program, thecorrelation"
+        />
 
-  <link
-    rel="canonical"
-    href="https://thecorrelation.in/courses/elevate-program"
-  />
+        <link
+          rel="canonical"
+          href="https://thecorrelation.in/courses/elevate-program"
+        />
 
-  {/* Indexing */}
-  <meta name="robots" content="index, follow" />
-  <meta
-    name="googlebot"
-    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  />
+        {/* Indexing */}
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="googlebot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        />
 
-  {/* Local + Trust */}
-  <meta name="geo.region" content="IN-MP" />
-  <meta name="geo.placename" content="Indore" />
+        {/* Local + Trust */}
+        <meta name="geo.region" content="IN-MP" />
+        <meta name="geo.placename" content="Indore" />
 
-  <meta name="author" content="TheCorrelation School of AI & Data Science" />
-  <meta name="publisher" content="TheCorrelation School of AI & Data Science" />
+        <meta
+          name="author"
+          content="TheCorrelation School of AI & Data Science"
+        />
+        <meta
+          name="publisher"
+          content="TheCorrelation School of AI & Data Science"
+        />
 
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="TheCorrelation" />
-  <meta
-    property="og:title"
-    content="Data Science & AI Online Weekend Course for Professionals | Elevate Program"
-  />
-  <meta
-    property="og:description"
-    content="A career-focused Data Science & AI online weekend course designed for working professionals. Learn with real projects, expert mentors and placement guidance."
-  />
-  <meta
-    property="og:url"
-    content="https://thecorrelation.in/courses/elevate-program"
-  />
-  <meta
-    property="og:image"
-    content="https://thecorrelation.in/og-elevate.png"
-  />
-  <meta property="og:locale" content="en_IN" />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="TheCorrelation" />
+        <meta
+          property="og:title"
+          content="Data Science & AI Online Weekend Course for Professionals | Elevate Program"
+        />
+        <meta
+          property="og:description"
+          content="A career-focused Data Science & AI online weekend course designed for working professionals. Learn with real projects, expert mentors and placement guidance."
+        />
+        <meta
+          property="og:url"
+          content="https://thecorrelation.in/courses/elevate-program"
+        />
+        <meta
+          property="og:image"
+          content="https://thecorrelation.in/og-elevate.png"
+        />
+        <meta property="og:locale" content="en_IN" />
 
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="Data Science & AI Online Weekend Course for Professionals | Elevate Program"
-  />
-  <meta
-    name="twitter:description"
-    content="Upskill with TheCorrelation’s Data Science & AI online weekend course for working professionals."
-  />
-  <meta
-    name="twitter:image"
-    content="https://thecorrelation.in/og-elevate.png"
-  />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Data Science & AI Online Weekend Course for Professionals | Elevate Program"
+        />
+        <meta
+          name="twitter:description"
+          content="Upskill with TheCorrelation’s Data Science & AI online weekend course for working professionals."
+        />
+        <meta
+          name="twitter:image"
+          content="https://thecorrelation.in/og-elevate.png"
+        />
 
-  {/* Mobile */}
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</Head>
-
+        {/* Mobile */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
       <section className="relative text-white">
         {/* Optimized Background Image */}
@@ -410,40 +415,37 @@ const PostGraduation2 = () => {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4 pt-6 mb-6">
-
-  {/* 📱 Mobile → Call */}
-  <a
-    href="tel:+917415346222"
-    className="block md:hidden "
-  >
-    <div className=" min-h-[56px] px-6 bg-green-600 text-white font-semibold rounded-xl
+                {/* 📱 Mobile → Call */}
+                <a href="tel:+917415346222" className="block md:hidden ">
+                  <div
+                    className=" min-h-[56px] px-6 bg-green-600 text-white font-semibold rounded-xl
       flex items-center justify-center gap-2 text-center
       transition-all duration-300 ease-in-out
       shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
-    >
-      <PhoneCall className="w-5 h-5" />
-      <span>Talk to Team</span>
-    </div>
-  </a>
+                  >
+                    <PhoneCall className="w-5 h-5" />
+                    <span>Talk to Team</span>
+                  </div>
+                </a>
 
-  {/* 💻 Tablet & Desktop → WhatsApp */}
-  <a
-    href="https://wa.me/917415346222?text=Hey%2C%20I%20want%20to%20know%20more%20about%20the%20Elevate%20Program%20in%20Applied%20Data%20Science."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hidden md:block "
-  >
-    <div className="w-full min-h-[56px] px-6 bg-green-600 text-white font-semibold rounded-xl
+                {/* 💻 Tablet & Desktop → WhatsApp */}
+                <a
+                  href="https://wa.me/917415346222?text=Hey%2C%20I%20want%20to%20know%20more%20about%20the%20Elevate%20Program%20in%20Applied%20Data%20Science."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden md:block "
+                >
+                  <div
+                    className="w-full min-h-[56px] px-6 bg-green-600 text-white font-semibold rounded-xl
       flex items-center justify-center gap-2 text-center
       transition-all duration-300 ease-in-out
       shadow-lg hover:bg-green-700 hover:shadow-xl hover:scale-[1.02]"
-    >
-      <PhoneCall className="w-5 h-5" />
-      <span>Talk to Team</span>
-    </div>
-  </a>
-
-</div>
+                  >
+                    <PhoneCall className="w-5 h-5" />
+                    <span>Talk to Team</span>
+                  </div>
+                </a>
+              </div>
             </div>
 
             {/* RIGHT SIDE VISUAL — unchanged */}
@@ -781,8 +783,8 @@ const PostGraduation2 = () => {
 
       <LeadForm></LeadForm>
 
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-10 sm:py-20 bg-white">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6">
           {/* Heading */}
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
@@ -807,7 +809,7 @@ const PostGraduation2 = () => {
             <img
               src="/Elevate-Program-timeline-desktop.jpeg"
               alt="Elevate Program Weekly Timeline Desktop"
-              className="hidden md:block w-full max-w-5xl rounded-2xl shadow-xl"
+              className="hidden md:block w-full max-w-none rounded-2xl shadow-xl md:-mx-32 lg:-mx-84"
             />
           </div>
         </div>

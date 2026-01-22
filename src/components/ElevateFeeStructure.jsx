@@ -185,8 +185,8 @@ export default function ElevateProgramFee() {
   <a
     href={
       paymentType === "onetime"
-        ? "https://rzp.io/i/ONETIME_PAYMENT_LINK" // 🔁 replace later
-        : "https://rzp.io/i/FLEXIBLE_PAYMENT_LINK" // 🔁 replace later
+        ? "https://pages.razorpay.com/elevate1enrolemnt" // 🔁 replace later
+        : "https://pages.razorpay.com/elevate2enrolment" // 🔁 replace later
     }
     target="_blank"
     rel="noopener noreferrer"
