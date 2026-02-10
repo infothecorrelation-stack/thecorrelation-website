@@ -11,56 +11,57 @@ import {
 
 const YourJourneySection = () => {
   const steps = [
-    {
-      title: "Step 1",
-      heading: "Connect with Our Experts",
-      desc: "Schedule a free one-on-one consultation with our experienced mentors. They'll guide you through career possibilities, explain the curriculum structure, and ensure the program aligns with your aspirations.",
-      image: "/step-1.jpg",
-      IconComponent: UserCheck,
-    },
-    {
-      title: "Step 2",
-      heading: "Registration & Profile Evaluation",
-      desc: "Complete your registration and submit your profile. Our admission team will thoroughly assess your background, interests, and goals to ensure you're a strong fit for the program.",
-      image: "/step-2.jpg",
-      IconComponent: ClipboardList,
-    },
-    {
-      title: "Step 3",
-      heading: "Scholarship Assessment",
-      desc: "Participate in an aptitude and profile-based assessment to unlock merit scholarships. This step helps determine your eligibility for financial aid and awards based on your skills and potential.",
-      image: "/step-3.jpg",
-      IconComponent: BadgePercent,
-    },
-    {
-      title: "Step 4",
-      heading: "Fee & EMI Options",
-      desc: "Explore personalized fee structures and benefit from flexible EMI options tailored to your budget. We'll ensure that finances don't become a barrier to your learning journey.",
-      image: "/step-4.jpg",
-      IconComponent: CreditCard,
-    },
-    {
-      title: "Step 5",
-      heading: "9 Months Curriculum",
-      desc: "Dive into an intensive 9-month learning journey featuring live classes, real-world projects, capstones, assignments, and peer learning. Stay industry-ready through hands-on experience.",
-      image: "/step-5.jpg",
-      IconComponent: BookOpen,
-    },
-    {
-      title: "Step 6",
-      heading: "Paid Internship",
-      desc: "Apply your skills in real-world environments through our paid internship programs. Work with live clients, solve actual business problems, and build an impressive portfolio.",
-      image: "/step-6.jpg",
-      IconComponent: Briefcase,
-    },
-    {
-      title: "Step 7",
-      heading: "Job Placement & Certification",
-      desc: "Get placed in top-tier companies with our 100% job guarantee. Walk away with recognized industry certification and the experience needed to excel in your new role.",
-      image: "/step-7.jpg",
-      IconComponent: ShieldCheck,
-    },
-  ];
+  {
+    title: "Step 1",
+    heading: "Connect with Our Experts",
+    desc: "Schedule a free one-on-one consultation with our experienced mentors. Gain clarity on career pathways, program outcomes, and how the curriculum aligns with your professional goals.",
+    image: "/step-1.jpg",
+    IconComponent: UserCheck,
+  },
+  {
+    title: "Step 2",
+    heading: "Registration & Profile Evaluation",
+    desc: "Complete your registration and submit your profile. Our admissions team evaluates your background, experience, and interests to ensure the right program fit.",
+    image: "/step-2.jpg",
+    IconComponent: ClipboardList,
+  },
+  {
+    title: "Step 3",
+    heading: "Eligibility & Scholarship Assessment",
+    desc: "Take part in an aptitude and profile-based assessment to determine eligibility and explore available scholarship or financial support opportunities.",
+    image: "/step-3.jpg",
+    IconComponent: BadgePercent,
+  },
+  {
+    title: "Step 4",
+    heading: "Fee Structure & EMI Options",
+    desc: "Receive a personalized fee structure along with flexible EMI and financing options designed to make quality education accessible.",
+    image: "/step-4.jpg",
+    IconComponent: CreditCard,
+  },
+  {
+    title: "Step 5",
+    heading: "Industry-Aligned Learning Experience",
+    desc: "Learn through live instructor-led sessions, practical assignments, hands-on projects, and real-world case studies curated by industry experts.",
+    image: "/step-5.jpg",
+    IconComponent: BookOpen,
+  },
+  {
+    title: "Step 6",
+    heading: "Practical Exposure & Skill Building",
+    desc: "Strengthen your skills through applied learning, capstone projects, simulations, and guided practical exposure designed to build job readiness.",
+    image: "/step-6.jpg",
+    IconComponent: Briefcase,
+  },
+  {
+    title: "Step 7",
+    heading: "Career Support & Certification",
+    desc: "Benefit from dedicated career assistance including resume building, interview preparation, and placement support, along with industry-recognized certification.",
+    image: "/step-7.jpg",
+    IconComponent: ShieldCheck,
+  },
+];
+
 
   return (
   <div className="overflow-x-hiddenc">
@@ -88,7 +89,7 @@ const YourJourneySection = () => {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${step.image})` }}
               />
-              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-black/60" />
 
               <div className="flex flex-col md:flex-row items-center md:items-start justify-start max-w-5xl w-full px-4 md:px-8 text-center md:text-left relative z-10">
                 {/* Icon */}

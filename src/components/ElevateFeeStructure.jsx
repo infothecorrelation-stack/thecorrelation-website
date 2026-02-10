@@ -142,17 +142,18 @@ export default function ElevateProgramFee() {
             {/* Flexible Payment View */}
             {paymentType === "flexible" && (
               <div className="text-center py-6 rounded-2xl animate-[fadeIn_0.3s_ease-out]">
-                
                 <div className="flex items-baseline justify-center gap-2 mb-2">
                   <span className="text-5xl font-bold text-gray-900">
                     {config.emi_price}
                   </span>
                   <span className="text-lg font-medium text-gray-600">
-                  /month
+                    /month
                   </span>
                   <span className="text-2xl font-medium text-red-600">*</span>
                 </div>
-                <p className="text-xs text-gray-600">*Two-Month Easy Instalment</p>
+                <p className="text-xs text-gray-600">
+                  *Two-Month Easy Instalment
+                </p>
               </div>
             )}
           </div>
@@ -180,51 +181,44 @@ export default function ElevateProgramFee() {
           </div>
 
           {/* Bottom Buttons */}
-         <div className="flex gap-4">
-  {/* Register Button */}
-  <a
-    href={
-      paymentType === "onetime"
-        ? "https://pages.razorpay.com/elevate1enrolemnt" // 🔁 replace later
-        : "https://pages.razorpay.com/elevate2enrolment" // 🔁 replace later
-    }
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex-1"
-  >
-    <div className="w-full min-h-[56px] bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center text-center transition-all duration-200 shadow-lg hover:shadow-xl hover:bg-green-700">
-      {paymentType === "onetime"
-        ? "Register Now"
-        : "Register Now"}
-    </div>
-  </a>
+          <div className="flex gap-4">
+            {/* Register Button */}
+            <a
+              href={
+                paymentType === "onetime"
+                  ? "https://pages.razorpay.com/elevate1enrolemnt" // 🔁 replace later
+                  : "https://pages.razorpay.com/elevate2enrolment" // 🔁 replace later
+              }
+              
+              className="flex-1"
+            >
+              <div className="w-full min-h-[56px] bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center text-center transition-all duration-200 shadow-lg hover:shadow-xl hover:bg-green-700">
+                {paymentType === "onetime" ? "Register Now" : "Register Now"}
+              </div>
+            </a>
 
-  {/* Talk to Team */}
-  <div className="flex-1">
-    {/* 📱 Mobile → Call */}
-    <a
-      href="tel:+917415346222"
-      className="block md:hidden"
-    >
-      <div className="w-full min-h-[56px] bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center text-center transition-all duration-200 shadow-lg hover:bg-green-700">
-        Talk to Team
-      </div>
-    </a>
+            {/* Talk to Team */}
+            <div className="flex-1">
+              {/* 📱 Mobile → Call */}
+              <a href="tel:+917415346222" className="block md:hidden">
+                <div className="w-full min-h-[56px] bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center text-center transition-all duration-200 shadow-lg hover:bg-green-700">
+                  Talk to Team
+                </div>
+              </a>
 
-    {/* 💻 Tablet & Desktop → WhatsApp */}
-    <a
-      href="https://wa.me/917415346222?text=Hey%2C%20I%20want%20to%20know%20more%20about%20the%20Elevate%20Program%20in%20Applied%20Data%20Science."
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hidden md:block"
-    >
-      <div className="w-full min-h-[56px] bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center text-center transition-all duration-200 shadow-lg hover:bg-green-700">
-        Talk to Team
-      </div>
-    </a>
-  </div>
-</div>
-
+              {/* 💻 Tablet & Desktop → WhatsApp */}
+              <a
+                href="https://wa.me/917415346222?text=Hey%2C%20I%20came%20across%20the%20Elevate%20Program%20in%20Applied%20Data%20Science%20on%20your%20website%20and%20would%20like%20to%20know%20more%20about%20it."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:block"
+              >
+                <div className="w-full min-h-[56px] bg-green-600 text-white font-semibold rounded-xl flex items-center justify-center text-center transition-all duration-200 shadow-lg hover:bg-green-700">
+                  Talk to Team
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

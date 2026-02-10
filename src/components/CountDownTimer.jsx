@@ -44,13 +44,13 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="bg-red-600 text-white p-6 rounded-xl inline-block">
-      <h3 className="text-xl font-bold mb-4">Next Batch Starts In:</h3>
-      <div className="flex space-x-4 justify-center">
-        {Object.entries(timeLeft).map(([unit, value]) => (
-          <div key={unit} className="text-center">
-            <div className="text-3xl font-bold">{value}</div>
-            <div className="text-sm capitalize">{unit}</div>
+    <div className="bg-red-600 text-white p-6 rounded-xl inline-block"> 
+      <h3 className="text-xl font-bold mb-4">Next Batch Starts In:</h3> 
+      <div className="flex space-x-4 justify-center"> 
+        {Object.entries(timeLeft).map(([unit, value]) => ( 
+          <div key={unit} className="text-center"> 
+            <div className="text-3xl font-bold">{value}</div> 
+            <div className="text-sm capitalize">{unit}</div> 
           </div>
         ))}
       </div>

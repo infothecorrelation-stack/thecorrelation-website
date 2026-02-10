@@ -3,49 +3,50 @@ import React from 'react'
 
 const StepsSection = () => {
   const steps = [
-    {
-      title: 'Step 1',
-      heading: 'Connect with Our Experts',
-      desc: 'Schedule a free consultation to discuss your career goals and program fit.',
-      color: 'bg-blue-500',
-    },
-    {
-      title: 'Step 2',
-      heading: 'Registration & Profile Evaluation',
-      desc: 'Complete your registration and get your profile evaluated by our admission team.',
-      color: 'bg-green-500',
-    },
-    {
-      title: 'Step 3',
-      heading: 'Scholarship Assessment',
-      desc: 'Take our aptitude test and profile assessment for scholarship opportunities.',
-      color: 'bg-yellow-500',
-    },
-    {
-      title: 'Step 4',
-      heading: 'Fee & EMI Options',
-      desc: 'Receive personalized fee structure and flexible EMI payment options.',
-      color: 'bg-red-500',
-    },
-    {
-      title: 'Step 5',
-      heading: '9 Months Curriculum',
-      desc: 'Intensive learning with live classes, projects, and hands-on experience.',
-      color: 'bg-purple-500',
-    },
-    {
-      title: 'Step 6',
-      heading: 'Paid Internship',
-      desc: 'Gain real industry experience with our paid internship program.',
-      color: 'bg-pink-500',
-    },
-    {
-      title: 'Step 7',
-      heading: 'Job Placement & Certification',
-      desc: 'Get placed in top companies with our 100% job guarantee and receive your certification.',
-      color: 'bg-indigo-500',
-    },
-  ];
+  {
+    title: 'Step 1',
+    heading: 'Career Consultation with Experts',
+    desc: 'Connect with our academic and career advisors to understand program outcomes and align your goals.',
+    color: 'bg-blue-500',
+  },
+  {
+    title: 'Step 2',
+    heading: 'Registration & Profile Review',
+    desc: 'Complete your registration and get a detailed profile evaluation by our admissions team.',
+    color: 'bg-green-500',
+  },
+  {
+    title: 'Step 3',
+    heading: 'Eligibility & Scholarship Assessment',
+    desc: 'Appear for aptitude and profile assessments to explore eligibility and scholarship opportunities.',
+    color: 'bg-yellow-500',
+  },
+  {
+    title: 'Step 4',
+    heading: 'Fee Structure & EMI Options',
+    desc: 'Receive a customized fee plan with flexible EMI and financing options.',
+    color: 'bg-red-500',
+  },
+  {
+    title: 'Step 5',
+    heading: 'Industry-Aligned Learning Journey',
+    desc: 'Learn through live sessions, practical assignments, and real-world projects designed by industry experts.',
+    color: 'bg-purple-500',
+  },
+  {
+    title: 'Step 6',
+    heading: 'Practical Exposure & Career Readiness',
+    desc: 'Build hands-on experience through case studies, capstone projects, and applied learning initiatives.',
+    color: 'bg-pink-500',
+  },
+  {
+    title: 'Step 7',
+    heading: 'Career Support & Certification',
+    desc: 'Receive dedicated job assistance, interview preparation, resume support, and industry-recognized certification.',
+    color: 'bg-indigo-500',
+  },
+];
+
 
   return (
     <div>

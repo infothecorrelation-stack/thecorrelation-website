@@ -14,27 +14,29 @@ const Navbar = ({ variant }) => {
   const [iconSpin, setIconSpin] = useState(false);
   const coursesDropdownRef = useRef(null);
   const aboutDropdownRef = useRef(null);
-  
+
   // Define pages that should have black navbar (light background pages)
   const lightBackgroundPages = [
-      "/privacy-policy",
-      "/student-code-of-conduct",
-      "/terms-of-service",
-      "/admission-policy",
-      "/contact",
-      "/career",
+    "/privacy-policy",
+    "/student-code-of-conduct",
+    "/terms-of-service",
+    "/admission-policy",
+    "/contact",
+    "/career",
     "/blog",
+    "/verify-certificate",
+    "/payment-success"
     // Add more pages here as needed
   ];
-  
+
   // Check if current page should have black navbar
   const isBlogSlug = pathname?.startsWith("/blog/") || false;
 
-const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
+  const isLightBackground =
+    lightBackgroundPages.includes(pathname) || isBlogSlug;
 
-  
   const isDark = variant === "dark";
- 
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -75,14 +77,14 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
   const isActive = (path) => pathname === path;
 
   // Theme-based styles
-  const navbarBg = isLightBackground 
+  const navbarBg = isLightBackground
     ? "absolute bg-transparent text-black"
     : isDark
     ? "absolute bg-transparent text-black"
     : "absolute bg-transparent text-white";
 
   const textColor = isLightBackground ? "text-black" : "text-white";
-  const activeStyle = isLightBackground 
+  const activeStyle = isLightBackground
     ? "text-black border-b-2 border-black"
     : "text-white border-b-2 border-white";
   const hoverStyle = isLightBackground
@@ -93,12 +95,17 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
   const menuIconColor = isLightBackground ? "text-black" : "text-white";
 
   const postGraduationLinks = [
-    
-    { label: "Post Graduation Program", path: "/courses/post-graduation-program" },
+    {
+      label: "Post Graduation Program",
+      path: "/courses/post-graduation-program",
+    },
   ];
 
   const charteredLinks = [
-    { label: "Chartered Data Science", path: "/courses/chartered-data-science" },
+    {
+      label: "Chartered Data Science",
+      path: "/courses/chartered-data-science",
+    },
     {
       label: "Chartered Business Analytics",
       path: "/courses/chartered-bussiness-analytics",
@@ -106,24 +113,40 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
   ];
 
   const certificationLinks = [
-    { label: "Applied Data Analytics", path: "/courses/applied-data-analytics" },
-    { label: "Foundational Machine Learning", path: "/courses/foundational-machine-learning" },
-    
+    {
+      label: "Applied Data Analytics",
+      path: "/courses/applied-data-analytics",
+    },
+    {
+      label: "Foundational Machine Learning",
+      path: "/courses/foundational-machine-learning",
+    },
+
     {
       label: "Advanced Machine Learning",
       path: "/courses/advanced-machine-learning",
     },
-    { label: "Deep Learning with Generative AI", path: "/courses/deep-learning-with-generative-ai" },
+    {
+      label: "Deep Learning with Generative AI",
+      path: "/courses/deep-learning-with-generative-ai",
+    },
   ];
 
   const careerLinks = [
-    { label: "Elevate Program In Appled Data Science", path: "/courses/elevate-program" },
+    {
+      label: "Elevate Program In Appled Data Science",
+      path: "/courses/elevate-program",
+    },
+     {
+      label: "Elevate Program In Data Analytics",
+      path: "/courses/elevate-program-in-data-analytics",
+    }
   ];
 
   const aboutLinks = [
     { label: "About Us", path: "/about-us" },
     { label: "About Director", path: "/about-us" },
-   
+
     { label: "Contact Us", path: "/contact" },
   ];
 
@@ -151,7 +174,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
   const navItems = ["Home", "Courses", "Blog", "About Us"];
 
   return (
-     <motion.div
+    <motion.div
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100 }}
@@ -170,16 +193,13 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
             href="/"
             className="absolute top-7 left-6 z-30 hover:opacity-80 transition-opacity"
           >
-           <img
-  src="/logo1.svg"
-  alt="The Correlation"
-  className={`h-5 w-auto transition-all duration-300 ${
-    isLightBackground
-      ? "filter brightness-0 saturate-100"
-      : ""
-  }`}
-/>
-
+            <img
+              src="/logo1.svg"
+              alt="The Correlation"
+              className={`h-5 w-auto transition-all duration-300 ${
+                isLightBackground ? "filter brightness-0 saturate-100" : ""
+              }`}
+            />
           </Link>
         </motion.div>
 
@@ -225,7 +245,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               Post Graduation Program
                             </h3>
                             <p className="text-gray-400 text-xs mb-2">
-                             Comprehensive programs
+                              Comprehensive programs
                             </p>
                             <div className="flex flex-wrap gap-1 mb-2">
                               <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
@@ -345,7 +365,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               Elevated Programs
                             </h3>
                             <p className="text-gray-400 text-xs mb-2">
-                             Career Boost + Weekend Live Classes
+                              Career Boost + Weekend Live Classes
                             </p>
                             <div className="flex flex-wrap gap-1 mb-2">
                               <span className="text-xs bg-green-500/20 text-green-300 px-2 py-0.5 rounded">
@@ -379,9 +399,6 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                               ))}
                             </ul>
                           </div>
-                          
-
-                 
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -491,33 +508,31 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
           transition={{ delay: 0.4 }}
         >
           <div className="flex gap-4">
-  <Link
-    href="https://forms.office.com/r/UKFvBM0iJ6"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
-      isLightBackground
-        ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
-        : "bg-white text-black border-2 border-white"
-    }`}
-  >
-    Verify Certificate
-  </Link>
+            <Link
+              href="/verify-certificate"
+              rel="noopener noreferrer"
+              className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
+                isLightBackground
+                  ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
+                  : "bg-white text-black border-2 border-white"
+              }`}
+            >
+              Verify Certificate
+            </Link>
 
-  <Link
-    href="https://studentportal.thecorrelation.co.in/login"
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
-      isLightBackground
-        ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
-        : "bg-white text-black border-2 border-white"
-    }`}
-  >
-    Student Login
-  </Link>
-</div>
-
+            <Link
+              href="https://studentportal.thecorrelation.co.in/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-5 py-2 font-bold text-md rounded-full shadow-md transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 ${
+                isLightBackground
+                  ? "bg-black text-white border-2 border-black hover:bg-white hover:text-black"
+                  : "bg-white text-black border-2 border-white"
+              }`}
+            >
+              Student Login
+            </Link>
+          </div>
         </motion.div>
 
         {/* Mobile Icon */}
@@ -537,7 +552,7 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
         </div>
       </div>
 
-{/* Mobile Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -589,30 +604,42 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                             }`}
                           >
                             <div className="mt-2">
-                              <h3 className={`font-bold mb-1 text-sm ${
-                                isLightBackground ? "text-gray-900" : "text-white"
-                              }`}>
+                              <h3
+                                className={`font-bold mb-1 text-sm ${
+                                  isLightBackground
+                                    ? "text-gray-900"
+                                    : "text-white"
+                                }`}
+                              >
                                 Post Graduation Program
                               </h3>
-                              <p className={`text-xs mb-1 ${
-                                isLightBackground ? "text-gray-600" : "text-gray-400"
-                              }`}>
+                              <p
+                                className={`text-xs mb-1 ${
+                                  isLightBackground
+                                    ? "text-gray-600"
+                                    : "text-gray-400"
+                                }`}
+                              >
                                 New comprehensive programs
                               </p>
                               <div className="flex flex-wrap gap-1 mb-2">
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-green-100 text-green-700"
-                                    : "bg-green-500/20 text-green-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-green-100 text-green-700"
+                                      : "bg-green-500/20 text-green-300"
+                                  }`}
+                                >
                                   Offline
                                 </span>
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-blue-100 text-blue-700"
-                                    : "bg-blue-500/20 text-blue-300"
-                                }`}>
-                                Premium
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-blue-100 text-blue-700"
+                                      : "bg-blue-500/20 text-blue-300"
+                                  }`}
+                                >
+                                  Premium
                                 </span>
                               </div>
                               <ul className="space-y-1 pl-2">
@@ -645,29 +672,41 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                             </div>
 
                             <div className="mt-2">
-                              <h3 className={`font-bold mb-1 text-sm ${
-                                isLightBackground ? "text-gray-900" : "text-white"
-                              }`}>
+                              <h3
+                                className={`font-bold mb-1 text-sm ${
+                                  isLightBackground
+                                    ? "text-gray-900"
+                                    : "text-white"
+                                }`}
+                              >
                                 Chartered Programs
                               </h3>
-                              <p className={`text-xs mb-1 ${
-                                isLightBackground ? "text-gray-600" : "text-gray-400"
-                              }`}>
+                              <p
+                                className={`text-xs mb-1 ${
+                                  isLightBackground
+                                    ? "text-gray-600"
+                                    : "text-gray-400"
+                                }`}
+                              >
                                 Career transformation
                               </p>
                               <div className="flex flex-wrap gap-1 mb-2">
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-purple-100 text-purple-700"
-                                    : "bg-purple-500/20 text-purple-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-purple-100 text-purple-700"
+                                      : "bg-purple-500/20 text-purple-300"
+                                  }`}
+                                >
                                   Hybrid
                                 </span>
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-orange-100 text-orange-700"
-                                    : "bg-orange-500/20 text-orange-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-orange-100 text-orange-700"
+                                      : "bg-orange-500/20 text-orange-300"
+                                  }`}
+                                >
                                   Premium
                                 </span>
                               </div>
@@ -701,29 +740,41 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                             </div>
 
                             <div className="mt-2">
-                              <h3 className={`font-bold mb-1 text-sm ${
-                                isLightBackground ? "text-gray-900" : "text-white"
-                              }`}>
+                              <h3
+                                className={`font-bold mb-1 text-sm ${
+                                  isLightBackground
+                                    ? "text-gray-900"
+                                    : "text-white"
+                                }`}
+                              >
                                 Certification Programs
                               </h3>
-                              <p className={`text-xs mb-1 ${
-                                isLightBackground ? "text-gray-600" : "text-gray-400"
-                              }`}>
+                              <p
+                                className={`text-xs mb-1 ${
+                                  isLightBackground
+                                    ? "text-gray-600"
+                                    : "text-gray-400"
+                                }`}
+                              >
                                 Self-paced + Classroom
                               </p>
                               <div className="flex flex-wrap gap-1 mb-2">
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-cyan-100 text-cyan-700"
-                                    : "bg-cyan-500/20 text-cyan-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-cyan-100 text-cyan-700"
+                                      : "bg-cyan-500/20 text-cyan-300"
+                                  }`}
+                                >
                                   Flexible
                                 </span>
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-yellow-100 text-yellow-700"
-                                    : "bg-yellow-500/20 text-yellow-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-yellow-100 text-yellow-700"
+                                      : "bg-yellow-500/20 text-yellow-300"
+                                  }`}
+                                >
                                   Industry-Ready
                                 </span>
                               </div>
@@ -757,29 +808,41 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                             </div>
 
                             <div className="mt-2">
-                              <h3 className={`font-bold mb-1 text-sm ${
-                                isLightBackground ? "text-gray-900" : "text-white"
-                              }`}>
+                              <h3
+                                className={`font-bold mb-1 text-sm ${
+                                  isLightBackground
+                                    ? "text-gray-900"
+                                    : "text-white"
+                                }`}
+                              >
                                 Elevated Programs
                               </h3>
-                              <p className={`text-xs mb-1 ${
-                                isLightBackground ? "text-gray-600" : "text-gray-400"
-                              }`}>
-                                Career Boost + Self-paced
+                              <p
+                                className={`text-xs mb-1 ${
+                                  isLightBackground
+                                    ? "text-gray-600"
+                                    : "text-gray-400"
+                                }`}
+                              >
+                                Career Boost + Weekend Live Classes
                               </p>
                               <div className="flex flex-wrap gap-1 mb-2">
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-cyan-100 text-cyan-700"
-                                    : "bg-cyan-500/20 text-cyan-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-cyan-100 text-cyan-700"
+                                      : "bg-cyan-500/20 text-cyan-300"
+                                  }`}
+                                >
                                   Flexible
                                 </span>
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  isLightBackground
-                                    ? "bg-yellow-100 text-yellow-700"
-                                    : "bg-yellow-500/20 text-yellow-300"
-                                }`}>
+                                <span
+                                  className={`text-xs px-2 py-0.5 rounded ${
+                                    isLightBackground
+                                      ? "bg-yellow-100 text-yellow-700"
+                                      : "bg-yellow-500/20 text-yellow-300"
+                                  }`}
+                                >
                                   Industry-Ready
                                 </span>
                               </div>
@@ -811,8 +874,6 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
                                 ))}
                               </ul>
                             </div>
-
-             
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -925,32 +986,31 @@ const isLightBackground = lightBackgroundPages.includes(pathname) || isBlogSlug;
               {/* Mobile Login */}
               <motion.div variants={navItemVariants} custom={6}>
                 <div className="flex gap-4">
-                <Link
-                  href="https://forms.office.com/r/UKFvBM0iJ6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block w-full text-center px-4 py-2 rounded-md border font-medium transition duration-300 ${
-                    isLightBackground
-                      ? "border-gray-900 bg-gray-900 text-white hover:bg-white hover:text-gray-900"
-                      : "border-white bg-transparent text-white hover:bg-white hover:text-black"
-                  }`}
-                  onClick={toggleMobileMenu}
-                >
-                  Verify Certificate
-                </Link>
-                <Link
-                  href="https://studentportal.thecorrelation.co.in/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block w-full text-center px-4 py-2 rounded-md border font-medium transition duration-300 ${
-                    isLightBackground
-                      ? "border-gray-900 bg-gray-900 text-white hover:bg-white hover:text-gray-900"
-                      : "border-white bg-transparent text-white hover:bg-white hover:text-black"
-                  }`}
-                  onClick={toggleMobileMenu}
-                >
-                  Student Login
-                </Link>
+                  <Link
+                    href="/verify-certificate"
+                    rel="noopener noreferrer"
+                    className={`block w-full text-center px-4 py-2 rounded-md border font-medium transition duration-300 ${
+                      isLightBackground
+                        ? "border-gray-900 bg-gray-900 text-white hover:bg-white hover:text-gray-900"
+                        : "border-white bg-transparent text-white hover:bg-white hover:text-black"
+                    }`}
+                    onClick={toggleMobileMenu}
+                  >
+                    Verify Certificate
+                  </Link>
+                  <Link
+                    href="https://studentportal.thecorrelation.co.in/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full text-center px-4 py-2 rounded-md border font-medium transition duration-300 ${
+                      isLightBackground
+                        ? "border-gray-900 bg-gray-900 text-white hover:bg-white hover:text-gray-900"
+                        : "border-white bg-transparent text-white hover:bg-white hover:text-black"
+                    }`}
+                    onClick={toggleMobileMenu}
+                  >
+                    Student Login
+                  </Link>
                 </div>
               </motion.div>
             </div>

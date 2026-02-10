@@ -209,7 +209,7 @@ const HomeHero = () => {
     w-full lg:w-1/3 
     z-20
 
-    
+  
     flex items-center justify-center
 
     px-6 py-16 lg:py-10

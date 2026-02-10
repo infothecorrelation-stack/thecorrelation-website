@@ -53,6 +53,8 @@ import {
   Layers,
   Network,
   Linkedin,
+  Monitor,
+  Globe,
 } from "lucide-react";
 
 import Image from "next/image";
@@ -77,9 +79,9 @@ import BookSection from "@/components/BookSection";
 import LeadForm from "@/components/LeadForm";
 import { postGraduationConfig } from "@/data/courseData";
 import CareerExpertCTA from "@/components/LeadButtonSection";
-import ElevateProgramStructure from "@/components/ElevateProgramStructure";
+import ElevateDAStructure from "@/components/ElevateDAStructure";
 import Elevatetimeline from "@/components/Elevatetimeline";
-import ElevatePriceSection from "@/components/ElevateFeeStructure";
+import ElevateDAFee from "@/components/ElevateDAFee";
 import CompactLeadForm from "@/components/CompactLeadForm";
 
 const PostGraduation2 = () => {
@@ -104,7 +106,7 @@ const PostGraduation2 = () => {
       ),
       label: "Total Effort",
     },
-    { title: "6 Months", label: "Program Duration" },
+    { title: "2.5 Months", label: "Program Duration" },
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
@@ -113,86 +115,79 @@ const PostGraduation2 = () => {
     {
       icon: <GraduationCap className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "What is the Elevate Program in Applied Data Science?",
+      title: "What is the Elevate Data Analytics Program?",
       content:
-        "The Elevate Program in Applied Data Science is a 6-month structured data science course designed for working professionals and students who want to learn data analytics, machine learning, and applied data science with flexible timings.",
+        "The Elevate Data Analytics Program is a 2.5-month, weekend-focused data analytics course in India designed for working professionals, graduates, and beginners to build job-ready analytics skills.",
     },
     {
       icon: <Users className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "Who should join this Applied Data Science program?",
+      title: "Who can join this Data Analytics course?",
       content:
-        "This program is ideal for working professionals, fresh graduates, college students, and career switchers who want to build a career in data science without leaving their job or studies.",
+        "This course is suitable for working professionals, fresh graduates, final-year students, career switchers, and learners from non-technical backgrounds.",
     },
     {
-      icon: <Clock className="w-6 h-6 text-black" />,
+      icon: <CalendarDays className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "Is this a weekend Data Science course?",
+      title: "Are these data analytics classes conducted on weekends?",
       content:
-        "Yes. This is a weekend-only Data Science program with live classes on Saturday and Sunday, making it suitable for learners from Tier 1 and Tier 2 cities.",
+        "Yes. All live classes are conducted on weekends (Saturday and Sunday), making it ideal for working professionals and college students.",
     },
     {
-      icon: <MonitorSmartphone className="w-6 h-6 text-black" />,
+      icon: <Monitor className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
       title: "How are the classes conducted?",
       content:
-        "Live classes are conducted on weekends (Saturday & Sunday – 3 hours each). From Monday to Friday, learners can watch pre-recorded videos at their own pace.",
+        "Classes are conducted live online on weekends, supported by guided learning, assignments, and access to class recordings through the LMS.",
     },
     {
       icon: <Clock className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "What is the duration of the Applied Data Science course?",
+      title: "What is the duration of this Data Analytics course?",
       content:
-        "The total duration of the program is 6 months, following a well-defined learning roadmap that progresses from basics to advanced data science concepts.",
+        "The total duration of the Elevate Data Analytics Program is 2.5 months, following a structured and job-oriented learning roadmap.",
     },
     {
       icon: <BookOpen className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "What topics are covered in this Data Science program?",
+      title: "What tools and skills will I learn?",
       content:
-        "The curriculum covers Data Analytics, Python, Statistics, SQL, Data Visualization, Machine Learning, Deep Learning fundamentals, and real-world industry projects.",
+        "You will learn Excel, SQL, Python, Power BI, data visualization, and practical business analytics skills used in real-world roles.",
     },
     {
       icon: <CheckCircle2 className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "Can beginners or non-technical students join this course?",
+      title: "Is this course suitable for non-technical background students?",
       content:
-        "Yes. The program starts from fundamentals and is suitable for beginners and learners from non-technical backgrounds such as commerce, management, or arts.",
+        "Yes. This data analytics course starts from the basics and is designed to be beginner-friendly for learners with no prior technical or coding experience.",
     },
     {
       icon: <Laptop className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
       title: "What if I miss a live weekend class?",
       content:
-        "All live classes are recorded and uploaded to the LMS. Learners receive 1-year LMS access to all recordings for revision and catch-up.",
+        "All live classes are recorded and uploaded to the LMS, allowing learners to watch sessions later for revision or catch-up.",
     },
     {
       icon: <FileCheck className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
-      title: "Are doubt-clearing sessions included?",
+      title: "Will I work on real-world data analytics projects?",
       content:
-        "Yes. Weekly doubt-clearing sessions are conducted where learners can ask questions related to recorded videos, live classes, assignments, and projects.",
-    },
-    {
-      icon: <Briefcase className="w-6 h-6 text-black" />,
-      bg: "bg-red-600",
-      title: "Do you provide study material or books?",
-      content:
-        "Yes. After registration, physical study books are delivered via post, along with complete digital learning resources available on the LMS.",
-    },
-    {
-      icon: <FileCheck className="w-6 h-6 text-black" />,
-      bg: "bg-red-600",
-      title: "Will I get real project experience in this program?",
-      content:
-        "Yes. Learners receive hands-on project experience in Data Analytics, Machine Learning, and Deep Learning, along with continuous mentor feedback.",
+        "Yes. Learners work on hands-on, real-world data analytics projects using real datasets to build a job-ready portfolio.",
     },
     {
       icon: <Briefcase className="w-6 h-6 text-black" />,
       bg: "bg-red-600",
       title: "Is career support included after course completion?",
       content:
-        "Yes. Career acceleration support includes resume building, LinkedIn optimization, Naukri and Indeed profile setup, and structured job search strategy guidance.",
+        "Yes. Career support includes resume building, LinkedIn optimization, mock interviews, and guidance for data analyst job roles.",
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-black" />,
+      bg: "bg-red-600",
+      title: "Is this Data Analytics course available PAN India?",
+      content:
+        "Yes. This data analytics course in India is available PAN India through live online weekend classes.",
     },
   ];
 
@@ -200,58 +195,58 @@ const PostGraduation2 = () => {
     {
       id: 1,
       icon: Brain,
-      title: "AI-Powered Learning Platform",
+      title: "Smart Learning Platform",
       description:
-        "Learn through an adaptive AI-enabled platform with personalized feedback, GenAI-based practice, and real-world simulations.",
+        "Practice data analytics with guided exercises, real datasets, and hands-on problem solving.",
     },
     {
       id: 2,
       icon: Laptop,
-      title: "Guided Live Learning (Not Self-Paced)",
+      title: "Live Instructor-Led Classes",
       description:
-        "A clear learning roadmap that tells you what to learn, when to learn, and how to apply it through structured live sessions.",
+        "Weekend live sessions with a clear roadmap — learn what matters and how to apply it.",
     },
     {
       id: 3,
       icon: CalendarCheck,
-      title: "Weekend-Only Live Classes",
+      title: "Weekend-Only Classes",
       description:
-        "Instructor-led classes every Saturday and Sunday (3 hours each), ideal for working professionals and final-year students.",
+        "Saturday and Sunday classes designed for working professionals and students.",
     },
     {
       id: 4,
       icon: Briefcase,
-      title: "Hands-On, Real-World Projects",
+      title: "Real-World Analytics Projects",
       description:
-        "Build deployable projects using Python, SQL, Power BI, Machine Learning, TensorFlow, and Generative AI.",
+        "Build job-ready projects using Excel, SQL, Python, and Power BI.",
     },
     {
       id: 5,
       icon: Users,
-      title: "Learn From Industry Experts",
+      title: "Industry Expert Trainers",
       description:
-        "Get trained by IIT faculty and senior AI engineers working on real enterprise-grade AI solutions.",
+        "Learn from experienced data analysts working on real business problems.",
     },
     {
       id: 6,
       icon: Target,
-      title: "Dedicated Mentorship & Career Support",
+      title: "Career & Placement Support",
       description:
-        "Skill-gap analysis, personalized career roadmap, resume & LinkedIn optimization, and mock interviews with feedback.",
+        "Resume help, mock interviews, and guidance for data analyst roles.",
     },
     {
       id: 7,
       icon: Layers,
-      title: "Integrated LMS Access",
+      title: "All-in-One LMS Access",
       description:
-        "Centralized LMS with pre-watch videos, live class links, recordings, assignments, and project resources.",
+        "Recordings, assignments, datasets, and project resources in one place.",
     },
     {
       id: 8,
       icon: Network,
-      title: "Community, Workshops",
+      title: "PAN India Community",
       description:
-        "Access mentors, peer groups, workshops and profile-based job recommendations.",
+        "Peer learning, mentor support, and career-focused workshops across India.",
     },
   ];
 
@@ -265,23 +260,23 @@ const PostGraduation2 = () => {
       <Head>
         {/* Primary SEO */}
         <title>
-          Data Science & AI Online Weekend Course for Professionals | Elevate
+          Data Analytics Online Weekend Course for Professionals | Elevate
           Program – TheCorrelation
         </title>
 
         <meta
           name="description"
-          content="Join the Data Science & AI Online Weekend Course for working professionals by TheCorrelation. Master Python, SQL, Machine Learning, Deep Learning and Generative AI through live classes, real-world projects and expert mentorship."
+          content="Join the Data Analytics Online Weekend Course for working professionals by TheCorrelation. Learn Excel, SQL, Python, Power BI, statistics and real-world analytics through live weekend classes, hands-on projects and expert mentorship."
         />
 
         <meta
           name="keywords"
-          content="data science online course for professionals, data science weekend course, ai course for working professionals, machine learning online course, data science elevate program, thecorrelation"
+          content="data analytics online course for professionals, data analytics weekend course, data analyst course online, excel sql python power bi course, elevate program data analytics, thecorrelation"
         />
 
         <link
           rel="canonical"
-          href="https://thecorrelation.in/courses/elevate-program"
+          href="https://thecorrelation.in/courses/elevate-program-in-data-analytics"
         />
 
         {/* Indexing */}
@@ -309,19 +304,19 @@ const PostGraduation2 = () => {
         <meta property="og:site_name" content="TheCorrelation" />
         <meta
           property="og:title"
-          content="Data Science & AI Online Weekend Course for Professionals | Elevate Program"
+          content="Data Analytics Online Weekend Course for Professionals | Elevate Program"
         />
         <meta
           property="og:description"
-          content="A career-focused Data Science & AI online weekend course designed for working professionals. Learn with real projects, expert mentors and placement guidance."
+          content="A career-focused Data Analytics online weekend program for working professionals. Build job-ready analytics skills with real projects, expert mentors and placement guidance."
         />
         <meta
           property="og:url"
-          content="https://thecorrelation.in/courses/elevate-program"
+          content="https://thecorrelation.in/courses/elevate-program-in-data-analytics"
         />
         <meta
           property="og:image"
-          content="https://thecorrelation.in/og-elevate.png"
+          content="https://thecorrelation.in/og-elevate-data-analytics.png"
         />
         <meta property="og:locale" content="en_IN" />
 
@@ -329,15 +324,15 @@ const PostGraduation2 = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Data Science & AI Online Weekend Course for Professionals | Elevate Program"
+          content="Data Analytics Online Weekend Course for Professionals | Elevate Program"
         />
         <meta
           name="twitter:description"
-          content="Upskill with TheCorrelation’s Data Science & AI online weekend course for working professionals."
+          content="Upskill with TheCorrelation’s Data Analytics online weekend course for working professionals."
         />
         <meta
           name="twitter:image"
-          content="https://thecorrelation.in/og-elevate.png"
+          content="https://thecorrelation.in/og-elevate-data-analytics.png"
         />
 
         {/* Mobile */}
@@ -368,7 +363,8 @@ const PostGraduation2 = () => {
               <div className="inline-flex items-center bg-black/40 rounded-full px-6 py-3 backdrop-blur-sm">
                 <span className="text-yellow-300 mr-2"></span>
                 <span className="text-sm text-white font-medium">
-                  Become Job-Ready Data Scientist in 6 Months (Weekend Program)
+                  Transform into a Job-Ready Data Analyst in 2.5 Months (Weekend
+                  Learning)
                 </span>
               </div>
 
@@ -379,15 +375,17 @@ const PostGraduation2 = () => {
                 </h1>
 
                 <div className="text-3xl lg:text-4xl font-bold text-yellow-300 typewriter">
-                  Applied Data Science
+                  Data Analytics
                 </div>
               </div>
 
               {/* Description */}
               <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-2xl">
-                Build industry-ready data science skills through a structured,
-                weekend-friendly program covering analytics, machine learning,
-                GenAI, and deployment. Learn by doing, not just watching.
+                A structured, weekend-friendly program designed for
+                professionals and beginners to master data analytics with
+                hands-on training in SQL, Python, data visualization, and
+                real-world analytics projects — learn by doing, not just
+                watching.
               </p>
 
               {/* ⭐ FIXED STATS (Perfect alignment) ⭐ */}
@@ -430,7 +428,7 @@ const PostGraduation2 = () => {
 
                 {/* 💻 Tablet & Desktop → WhatsApp */}
                 <a
-                  href="https://wa.me/917415346222?text=Hey%2C%20I%20came%20across%20the%20Elevate%20Program%20in%20Applied%20Data%20Science%20on%20your%20website%20and%20would%20like%20to%20know%20more%20about%20it."
+                  href="https://wa.me/917415346222?text=Hey%2C%20I%20came%20across%20the%20Elevate%20Program%20in%20Data%20Analytics%20on%20your%20website%20and%20would%20like%20to%20know%20more%20about%20it."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hidden md:block "
@@ -452,8 +450,8 @@ const PostGraduation2 = () => {
             <div>
               <div className="w-full max-w-md lg:ml-auto">
                 <CompactLeadForm
-                  courseName="elevate-program"
-                  courseDisplayName="Data Science Elevate Program"
+                  courseName="elevate-program-in-data-analytics"
+                  courseDisplayName="Elevate Program In Data Analytics"
                 />
               </div>
             </div>
@@ -479,39 +477,39 @@ const PostGraduation2 = () => {
       <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
-            About the Data Science Elevate Program
+            About the Data Analytics Elevate Program
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
               <p className="text-lg text-gray-600 mb-6">
-                Data Science Elevate is a guided executive learning program
-                created for professionals who want to build serious data science
-                and AI capabilities without leaving their jobs.
+                Elevate Data Analytics is a structured, weekend-friendly program
+                built for professionals and beginners who want to gain practical
+                data analytics skills without leaving their current job.
                 <br />
-                Unlike self-paced courses, this program follows a strict
-                instructor-led timeline, combining pre-watch learning, live
-                weekend classes, and hands-on assignments.
+                The program follows a live, instructor-led format with guided
+                learning, weekend classes, and hands-on assignments — not
+                self-paced videos.
               </p>
 
               <div className="space-y-4">
                 {[
                   {
-                    title: "Industry-Aligned Data Science Curriculum",
-                    desc: "Master Data Science, Machine Learning, Deep Learning, and model deployment with a curriculum aligned to real-world industry requirements and job roles.",
+                    title: "Industry-Relevant Data Analytics Curriculum",
+                    desc: "Learn Excel, SQL, Python, Power BI, and business analytics aligned with real job roles.",
                   },
                   {
-                    title: "Expert Faculty & Dedicated Mentorship",
-                    desc: "Learn directly from experienced Data Scientists and mentors from IIT, IIM, ISI, and senior professionals working on enterprise-grade AI solutions.",
+                    title: "Expert Trainers & Guided Mentorship",
+                    desc: "Learn from experienced analytics professionals with real industry exposure.",
                   },
                   {
-                    title: "Hands-On, Real-World Projects",
-                    desc: "Build deployable, portfolio-ready projects using live datasets and real business problem statements guided by industry experts.",
+                    title: "Hands-On, Real-World Analytics Projects",
+                    desc: "Work on practical projects using real datasets to build a job-ready portfolio.",
                   },
                   {
-                    title: "Career Support & Job Readiness Program",
-                    desc: "Get end-to-end career support including personalized mentorship, resume and LinkedIn optimization, mock interviews, and structured placement assistance.",
+                    title: "Career Support for Data Analyst Roles",
+                    desc: "Resume building, interview preparation, and career guidance for analytics roles.",
                   },
                 ].map((item, idx) => (
                   <div className="flex items-start gap-3" key={idx}>
@@ -531,7 +529,7 @@ const PostGraduation2 = () => {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">
-                  6 Months
+                  2.5 Months
                 </div>
                 <p className="text-gray-600 mb-6">
                   Full-Time Immersive Program
@@ -626,7 +624,7 @@ const PostGraduation2 = () => {
 
       <Tools />
 
-      <ElevateProgramStructure />
+      <ElevateDAStructure />
 
       <SoftSkillSection></SoftSkillSection>
 
@@ -779,43 +777,9 @@ const PostGraduation2 = () => {
         </div>
       </section>
 
-      <Elevatetimeline />
-
       <LeadForm></LeadForm>
 
-      <section className="py-10 sm:py-20 bg-white">
-        <div className="max-w-9xl mx-auto px-4 sm:px-6">
-          {/* Heading */}
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Elevate Program Plan & Weekly Timeline
-            </h2>
-            <p className="mt-3 text-gray-600 text-lg">
-              A structured, week-by-week roadmap designed for real-world
-              outcomes
-            </p>
-          </div>
-
-          {/* Images */}
-          <div className="flex justify-center">
-            {/* 📱 Mobile Image */}
-            <img
-              src="/Elevate-Program-timeline-mobile.jpeg"
-              alt="Elevate Program Weekly Timeline Mobile"
-              className="block md:hidden w-full max-w-md rounded-2xl shadow-lg"
-            />
-
-            {/* 💻 Tablet & Desktop Image */}
-            <img
-              src="/Elevate-Program-timeline-desktop.jpeg"
-              alt="Elevate Program Weekly Timeline Desktop"
-              className="hidden md:block w-full max-w-none rounded-2xl shadow-xl md:-mx-32 lg:-mx-84"
-            />
-          </div>
-        </div>
-      </section>
-
-      <ElevatePriceSection />
+      <ElevateDAFee />
 
       <section className="py-10 bg-white">
         <div className="container mx-auto px-6">

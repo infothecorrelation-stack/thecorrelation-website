@@ -43,7 +43,8 @@ const LeadForm = () => {
     "/courses/career-acceleration": "Career Acceleration",
 
     // Career Programs
-    "/courses/elevate-program": "Elevate Program",
+    "/courses/elevate-program": "Elevate Program In Data Science",
+    "/courses/elevate-program-in-data-analytics": "Elevate Program In Data Analytics",
 
     // Default
     "general": "Our Program"
