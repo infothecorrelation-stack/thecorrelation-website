@@ -9,7 +9,7 @@ const CBAPriceSection = () => {
     online: [
       {
         title: "Pay Now (Job Assurance)",
-        price: "₹41,200",
+        price: "₹45,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/cba-online-paynow",
         features: [
@@ -28,7 +28,7 @@ const CBAPriceSection = () => {
           "Start with lower upfront cost",
           "Job assurance after completion",
           "Flexible pay-later option",
-          "Total Program Fee: ₹50,000",
+          "Total Program Fee: ₹55,000",
         ],
       },
     ],
@@ -36,19 +36,19 @@ const CBAPriceSection = () => {
     offline: [
       {
         title: "Pay Now (Job Assurance)",
-        price: "₹56,200",
+        price: "₹70,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/cba-offline-paynow",
         features: [
           "Offline classroom experience",
           "Hands-on business analytics training",
           "Mentorship + Job Assurance",
-          "Program Fee Equivalent: ₹9,367",
+          "Program Fee Equivalent: ₹14,000",
         ],
       },
       {
         title: "SNPL (Job Assurance)",
-        price: "₹11,667/month",
+        price: "₹9,900/month",
         subtitle: "Pay Now ₹49,500 • Pay Later ₹30,500",
         razorpayLink: "https://rzp.io/l/cba-offline-snpl",
         features: [

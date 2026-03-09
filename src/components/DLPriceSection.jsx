@@ -9,12 +9,12 @@ const DeepLearningPriceSection = () => {
     online: [
       {
         title: "Pay Now",
-        price: "₹15,000",
+        price: "₹25,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/dl-online-paynow",
         features: [
-          "Expected Cost: ₹22,000",
-          "Program Fee: ₹6,000",
+          
+          "Program Fee: ₹12,500/Month",
           "Complete Deep Learning Coverage",
           "Foundations of Neural Networks",
           "Basic Generative AI Concepts",
@@ -25,12 +25,12 @@ const DeepLearningPriceSection = () => {
     offline: [
       {
         title: "Pay Now",
-        price: "₹23,000",
+        price: "₹45,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/dl-offline-paynow",
         features: [
-          "Expected Cost: ₹35,000",
-          "Program Fee: ₹9,200",
+          
+          "Program Fee: ₹22,500/Month",
           "Advanced DL Architectures (Offline)",
           "CNNs, RNNs, Autoencoders",
           "Generative Modeling Foundations",

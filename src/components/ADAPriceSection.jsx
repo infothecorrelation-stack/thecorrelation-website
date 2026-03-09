@@ -9,12 +9,12 @@ const ADAPriceSection = () => {
     online: [
       {
         title: "Pay Now",
-        price: "₹21,000",
+        price: "₹27,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/ada-online-paynow",
         features: [
-          "Expected Cost: ₹27,000",
-          "Program Fee: ₹6,000",
+        
+          "Program Fee: ₹9,000/Month",
           "Online learning experience",
           "Access to recorded materials",
         ],
@@ -24,12 +24,12 @@ const ADAPriceSection = () => {
     offline: [
       {
         title: "Pay Now",
-        price: "₹33,000",
+        price: "₹40,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/ada-offline-paynow",
         features: [
-          "Expected Cost: ₹40,000",
-          "Program Fee: ₹9,429",
+          
+          "Program Fee: ₹13,333/Month",
           "Offline training with faculty support",
           "Access to labs & practical sessions",
         ],

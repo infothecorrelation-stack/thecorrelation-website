@@ -9,12 +9,12 @@ const FMLPriceSection = () => {
     online: [
       {
         title: "Pay Now",
-        price: "₹15,000",
+        price: "₹22,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/fml-online-paynow",
         features: [
-          "Expected Cost: ₹22,000",
-          "Program Fee: ₹6,000",
+         
+          "Program Fee: 11,000/Month",
           "Online classes + recorded sessions",
           "Beginner-friendly ML curriculum",
         ],
@@ -24,12 +24,12 @@ const FMLPriceSection = () => {
     offline: [
       {
         title: "Pay Now",
-        price: "₹23,000",
+        price: "₹35,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/fml-offline-paynow",
         features: [
-          "Expected Cost: ₹35,000",
-          "Program Fee: ₹9,200",
+         
+          "Program Fee: ₹17,500",
           "Offline learning with faculty support",
           "Hands-on real ML projects",
         ],

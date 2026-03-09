@@ -55,7 +55,7 @@ const CoursePriceSection = () => {
       },
       {
         title: "Pay Now (Job Assurance)",
-        price: "₹1,77,000",
+        price: "₹1,87,000",
         razorpayLink: "https://rzp.io/l/offline-ja-paynow",
         features: [
           "Job assurance post completion",
@@ -65,7 +65,7 @@ const CoursePriceSection = () => {
       },
       {
         title: "EMI Option (Job Assurance)",
-        price: "₹11,667/month",
+        price: "₹18,700/month",
         subtitle: "for 12 months",
         razorpayLink: "https://rzp.io/l/offline-ja-emi",
         features: [

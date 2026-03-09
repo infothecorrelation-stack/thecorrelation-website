@@ -9,14 +9,14 @@ const CDSPriceSection = () => {
     online: [
       {
         title: "Pay Now (Assistance)",
-        price: "₹66,000",
+        price: "₹88,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/cds-online-paynow",
         features: [
           "Offline/Online flexible study access",
           "Complete assistance & mentorship",
           "Lifetime access to materials",
-          "Monthly equivalent: ₹6,600",
+          "Monthly equivalent: ₹11,000",
         ],
       },
       {
@@ -37,14 +37,14 @@ const CDSPriceSection = () => {
     offline: [
       {
         title: "Pay Now (Assistance)",
-        price: "₹95,000",
+        price: "₹126,000",
         subtitle: "One-time full payment",
         razorpayLink: "https://rzp.io/l/cds-offline-paynow",
         features: [
           "Full offline classroom experience",
           "Access to practical labs & faculty sessions",
           "Mentorship + assistance package",
-          "Monthly equivalent: ₹9,500",
+          "Monthly equivalent: ₹12,600",
         ],
       },
       {
