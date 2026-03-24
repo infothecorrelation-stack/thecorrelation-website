@@ -13,7 +13,6 @@ import {
   SiTensorflow,
   SiKeras,
   SiPytorch,
-  SiTableau,
   SiMysql,
   SiMongodb,
   SiJupyter,
@@ -41,7 +40,7 @@ const Tools = () => {
     { icon: <SiMysql className="text-blue-600 text-5xl" />, name: "MySQL" },
     
     { icon: <SiJupyter className="text-orange-400 text-5xl" />, name: "Jupyter Notebook" },
-    { icon: <SiTableau className="text-blue-700 text-5xl" />, name: "Tableau" },
+    
     { icon: <FaChartBar className="text-yellow-500 text-5xl" />, name: "Power BI" },
     { icon: <SiAnaconda className="text-green-500 text-5xl" />, name: "Anaconda" },
     { icon: <SiGit className="text-orange-600 text-5xl" />, name: "Git" },
