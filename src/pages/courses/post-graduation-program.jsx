@@ -40,7 +40,7 @@ const PostGraduation2 = () => {
 const stats = [
   { title: "100%", label: "Job Assurance" },
   { title: "Offline", label: "Program Mode" },
-  { title: "6 Hours", label: "Daily Efforts" },
+  { title: "8 Hours", label: "Daily Efforts" },
   { title: "12 Months", label: "Program Duration" },
 ];
   
@@ -440,11 +440,11 @@ const stats = [
 
       <SuccessStoriesSection></SuccessStoriesSection>
 
-      <Scholarship />
+      
 
       <YourJourneySection></YourJourneySection>
 
-      <LogicBoxSection></LogicBoxSection>
+      
 
       <CoursePriceSection/>
       
@@ -491,14 +491,6 @@ const stats = [
         </div>
       </section>
 
-
-      
-
-      
-
-      
-      
-      
 
       <CareerExpertCTA/>
 
