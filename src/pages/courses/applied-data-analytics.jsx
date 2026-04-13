@@ -424,7 +424,7 @@ const toggleFAQ = (index) => {
 
       
 
-     <Scholarship/>
+     
        
       
 
@@ -436,7 +436,7 @@ const toggleFAQ = (index) => {
 
       
 
-      <LogicBoxSection></LogicBoxSection>
+      
 
     
      

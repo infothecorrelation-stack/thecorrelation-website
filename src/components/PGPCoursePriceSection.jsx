@@ -32,7 +32,7 @@ export default function PGProgramFee() {
     ],
     register_link: "https://pages.razorpay.com/PGPenrolment",
     whatsapp_link:
-      "https://wa.me/917415346222?text=Hey%2C%20I%27m%20interested%20in%20the%20PG%20Program%20in%20Applied%20Data%20Science.",
+      "https://wa.me/917415346222?text=Hey%2C%20I%20came%20across%20the%20PGP%20in%20Applied%20Data%20Science%20on%20your%20website%20and%20would%20like%20to%20know%20more%20about%20it.",
     phone_link: "tel:+917415346222",
   };
 
@@ -47,7 +47,7 @@ export default function PGProgramFee() {
             <span className="inline-block bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
               Fully Offline · Campus Program
             </span>
-            <h1 className="text-4xl lg:text-5xl font-bold mb-3 text-gray-900">
+            <h1 className="text-3xl lg:text-4xl font-bold mb-3 text-gray-900">
               {config.main_heading}
             </h1>
             <p className="text-2xl font-medium mb-4 text-red-600">

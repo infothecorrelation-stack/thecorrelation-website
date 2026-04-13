@@ -444,11 +444,11 @@ const toggleFAQ = (index) => {
 
              <SuccessStoriesSection></SuccessStoriesSection>
 
-              <Scholarship></Scholarship>
+              
 
               <YourJourneySection></YourJourneySection>
       
-            <LogicBoxSection></LogicBoxSection>
+            
       
             <CDSPriceSection/>
       
